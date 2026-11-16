@@ -2,7 +2,7 @@
 name = "inventory"
 # Cargo requires a semver field. Releases are identified only by the build
 # date/time stamp written to version.txt and the Windows file properties.
-version = "1.0.0"
+version = "1.0.1"
 edition = "2021"
 rust-version = "1.88"
 description = "Portable laboratory inventory desktop application"

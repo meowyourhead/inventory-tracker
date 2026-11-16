@@ -5,7 +5,7 @@ host is written in Rust; the original HTML interface runs inside the Microsoft
 Edge WebView2 control. There is no Electron, no Node.js runtime and no console
 window.
 
-Current version: **1.0.0** (see [Releases](https://github.com/meowyourhead/inventory-tracker/releases)).
+Current version: **1.0.1** (see [Releases](https://github.com/meowyourhead/inventory-tracker/releases)).
 
 ## Quick start
 
@@ -39,8 +39,7 @@ inventory settings, so it is shared by every client that opens the same
 
 Inventory updates itself from this repository's GitHub Releases.
 **Settings → Updates** shows the installed version, build date, latest
-version, when it last checked and the update channel, with a **Check for
-updates** button.
+version and when it last checked, with a **Check for updates** button.
 
 - With **Install automatically** on (the default, stored per computer), the
   app checks about 4 seconds after start-up and every 6 hours.
