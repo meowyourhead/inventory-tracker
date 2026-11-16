@@ -1,0 +1,25 @@
+# Build output
+/target/
+*.exe
+Inventory.exe.update
+Inventory-*.zip
+/ai-bundle/
+
+# Inventory data: never commit real records
+inventory.json
+inventory.lock.json
+inventory.config.json
+*.tmp
+/AutoBackups/
+/data/
+
+# Workbooks (real lab ledgers)
+*.xlsm
+*.xlsx
+*.xls
+*.xlsb
+
+# Local AI tooling
+/.agents/
+/.claude/
+skills-lock.json
