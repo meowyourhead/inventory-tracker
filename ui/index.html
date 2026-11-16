@@ -1593,7 +1593,6 @@ body:has(#dashboard.active) .top,body:has(#charts.active) .top{flex:0 0 auto}
 .updActions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:8px}
 .updActions .switch{margin-left:auto}
 #updInstallBtn[hidden]{display:none}
-.updSource{margin-top:7px;font-size:10px;color:var(--muted);overflow-wrap:anywhere}
 #updModal{z-index:60}
 #updModal .modal{width:min(440px,92vw)}
 #updModal .panel{box-sizing:border-box;width:100%}
@@ -1816,9 +1815,7 @@ html[data-family=genshin] ::-webkit-slider-thumb{cursor:url("/cursors/gi_link.cu
               <div><span>Last checked</span><b id="updChecked">Never</b></div>
             </div>
             <div id="updStatus" class="backupHealth updStatus">Not checked yet.</div>
-            <div class="updActions"><button id="updCheckBtn" type="button" class="btn small">Check for updates</button><button id="updInstallBtn" type="button" class="btn small primary" hidden>Update now</button><label class="switch"><input id="updAutoToggle" type="checkbox"><span class="track"></span><span class="swLbl">Install automatically</span></label></div>
-            <div class="updSource">Channel: <span id="updChannel">GitHub Releases</span> · <span id="updRepo"></span></div>
-          </div>
+            <div class="updActions"><button id="updCheckBtn" type="button" class="btn small">Check for updates</button><button id="updInstallBtn" type="button" class="btn small primary" hidden>Update now</button><label class="switch"><input id="updAutoToggle" type="checkbox"><span class="track"></span><span class="swLbl">Install automatically</span></label></div>          </div>
         </div>
       </div>
     </section>
@@ -3889,8 +3886,6 @@ async function initUpdates(){
   const i=upd.info;
   $('#updCurrent').textContent='v'+i.version;
   $('#updBuild').textContent=i.buildDate||'—';
-  $('#updChannel').textContent=i.channel||'GitHub Releases';
-  $('#updRepo').textContent='github.com/'+i.repo;
   if(i.updatedFrom)toast(`Updated from v${i.updatedFrom} to v${i.version}`,false,{title:'Update installed',icon:'ok'});
   if(i.devBuild){updSetStatus('Development build: checking works, installing is disabled.','warn')}
   else{setTimeout(()=>checkForUpdates(true),4000);setInterval(()=>checkForUpdates(true),6*3600*1000)}
