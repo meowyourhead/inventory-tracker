@@ -610,7 +610,7 @@ library is involved.
   `https://chrischan13.github.io/zenless-ui/#/component/backtop`): black glossy
   panels, hard black outlines, `#008bff` primary controls, checkerboard button
   fills, 3 px pill inputs, hazard-striped background and 20 px/zero-corner
-  cards and modals. It uses the normal user Typeface setting (unlike
+  cards and modals. It uses the default SF Pro stack (unlike
   Cyberpunk/Genshin). The wordmark is `assets/zzz-logo.png`, embedded in the exe
   and served at `/theme/zzz-logo.png` for the Settings swatch. ZZZ light mode
   uses a darker muted/accent/cyan ramp and explicit dark-teal clock time
@@ -631,16 +631,17 @@ library is involved.
   greyed (grey fill, muted text, `grayscale(1)`, no shadow) and use the
   `gi_busy` cursor; no hover/active transform may leak through.
 - The reference fonts live in `rust\fonts\` and are embedded in the exe; the
-  original `zh-cn.ttf` remains the Genshin face. Theme typefaces override the
-  user Typeface setting for these two themes only.
+  original `zh-cn.ttf` remains the Genshin face.
 - Genshin's font is `rust\zh-cn.ttf` (family `HYWenHei-85W`, 7.2 MB). It is
   embedded into the exe with `include_bytes!` in `src/main.rs` and served at
   `/fonts/zh-cn.ttf`; the `@font-face` rule in `ui/index.html` aliases it as
   `"Genshin UI"`. The file must stay at `rust\zh-cn.ttf` or the build fails.
   It is included in the AI bundle ZIP so the source still compiles.
-- Both reworked themes override the user Typeface setting on purpose: their
-  letterforms are part of the look. The stored preference is untouched, so
-  other themes still honour it.
+- There is no Typeface picker in Settings (removed after 1.0.3). `--font`
+  comes from `themeFont(theme)`: `styrene` (Claude Sans) for Claude, `sfpro`
+  for every other theme; Cyberpunk/Genshin/ZZZ then set their own faces in
+  CSS. Theme clicks still write `settings.font` so older app versions on
+  other computers render the same face.
 - Claude (2026-11-18) is modelled on the claude.ai chat UI: paper `#faf9f5` /
   sidebar `#f5f4ed` / white cards (dark: `#262624` / `#1f1e1d` / `#30302e`),
   15%-ink hairline borders, clay `#c96442` only on primary actions and the
@@ -651,8 +652,8 @@ library is involved.
   Grotesk (`fonts/hanken-grotesk-latin-wght-normal.woff2`, family
   `"Claude Sans"`) and Source Serif 4 (`fonts/source-serif-4-latin-opsz-normal.woff2`,
   family `"Claude Serif"`), served at `/fonts/hanken-grotesk.woff2` and
-  `/fonts/source-serif-4.woff2`. The `styrene` and `anthropicserif` Typeface
-  options (labels now "Claude Sans"/"Claude Serif") resolve to them. The serif
+  `/fonts/source-serif-4.woff2`. The `FONTS` ids `styrene` and
+  `anthropicserif` resolve to them. The serif
   is used only for the greeting title, the wordmark and quantity/KPI numbers;
   nav rows get CSS-mask icons keyed on `data-v`, and the sidebar is 128 px.
 - Do not add ambient corner glows or radial colour washes to any theme; the

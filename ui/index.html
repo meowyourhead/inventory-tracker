@@ -416,9 +416,6 @@ html[data-family=genshin] .token span{border-radius:999px;font-weight:700;backgr
 html[data-family=genshin] .token input:checked+span{background:var(--g-cream);border-color:var(--g-cream);color:var(--g-cream-text)}
 html[data-family=genshin] .swatch{border-radius:6px;background:var(--g-panel);border-color:var(--line)}
 html[data-family=genshin] .swatchPreview{border-radius:4px}
-html[data-family=genshin] .fontOpt{border-radius:6px;background:var(--g-row);border-color:var(--line)}
-html[data-family=genshin] .fontOpt.active{background:var(--g-cream);color:var(--g-cream-text);border-color:var(--g-cream)}
-html[data-family=genshin] .fontOpt.active .fname{color:var(--g-cream-text)}
 html[data-family=genshin] ::-webkit-scrollbar{width:7px;height:7px}
 html[data-family=genshin] ::-webkit-scrollbar-track{background:color-mix(in srgb,var(--ink) 8%,transparent);border-radius:4px}
 html[data-family=genshin] ::-webkit-scrollbar-thumb{background:color-mix(in srgb,var(--ink) 55%,transparent);border-radius:4px}
@@ -526,8 +523,6 @@ html[data-family=zzz] .token span{background:var(--zzz-well);border:2px solid va
 html[data-family=zzz] .token input:checked+span{background:var(--zzz-blue);border-color:var(--zzz-border);color:#fff}
 html[data-family=zzz] .swatch{border:2px solid var(--zzz-border);border-radius:8px;background:var(--zzz-panel)}
 html[data-family=zzz] .swatchPreview{border-radius:5px}
-html[data-family=zzz] .fontOpt{border:1px solid var(--zzz-border);border-radius:6px;background:var(--zzz-well)}
-html[data-family=zzz] .fontOpt.active{border-color:var(--zzz-blue);background:color-mix(in srgb,var(--zzz-blue) 16%,var(--zzz-panel));color:var(--zzz-cyan)}
 html[data-family=zzz] :is(.logoutBtn,.quickEntry){background:var(--zzz-blue)!important;border:2px solid var(--zzz-border)!important;color:#fff!important;box-shadow:inset 0 0 0 2px rgba(255,255,255,.28)!important}
 html[data-family=zzz] :is(.logoutBtn,.quickEntry):hover{background:color-mix(in srgb,var(--zzz-blue) 80%,#fff)!important}
 html[data-family=zzz] .scanField{border:3px solid var(--zzz-input-border)!important;border-radius:999px!important;background:var(--zzz-input)!important}
@@ -579,6 +574,11 @@ html[data-mode=dark] input[type=date]{color-scheme:dark}
 aside{background:var(--card);border-right:1px solid var(--line);padding:14px 7px;display:flex;flex-direction:column}
 .brandtext{font-weight:800;font-size:13px;line-height:1.25;padding:2px 7px 13px;color:var(--accent);overflow:hidden;text-overflow:ellipsis}
 nav{display:flex;flex-direction:column;gap:2px}
+/* Each label reserves the width of its boldest form (an invisible bold copy
+   below it), so themes that bold the hovered/active tab never resize the
+   auto-width sidebar. */
+.navLbl{display:inline-flex;flex-direction:column}
+.navLbl::after{content:attr(data-label);height:0;overflow:hidden;visibility:hidden;font-weight:800;user-select:none;pointer-events:none}
 nav button{display:flex;align-items:center;gap:7px;width:100%;border:0;background:transparent;color:var(--muted);padding:9px 10px 9px 8px;border-radius:10px;text-align:left;cursor:pointer;font:inherit;font-size:12.8px;white-space:nowrap}
 nav button.active,nav button:hover{background:var(--soft);color:var(--accent);font-weight:700}
 .backToTopBtn{position:absolute;right:18px;bottom:10px;z-index:18;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:60px;height:60px;padding:0;border:1px solid var(--line);border-radius:50%;background:var(--card);color:var(--muted);font:inherit;font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;box-shadow:var(--shadow-md);opacity:0;visibility:hidden;pointer-events:none;transform:translateY(10px) scale(.96);transition:opacity .16s,transform .16s,background-color .2s,color .2s,border-color .2s}
@@ -905,12 +905,6 @@ input.opt,select.opt{background:color-mix(in srgb,var(--ink) 6%,var(--card));bor
 .logoPreview::after{opacity:.14}
 .swatchLogo{position:absolute;inset:0;margin:auto;width:88%;height:56%;display:block;background:var(--logoColor,#fff);-webkit-mask:var(--logo) center/contain no-repeat;mask:var(--logo) center/contain no-repeat;filter:drop-shadow(0 1px 2px rgba(0,0,0,.4))}
 .swatch.active .swatchPreview{box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ink) 12%,transparent),inset 0 -7px 14px -7px rgba(0,0,0,.28),0 4px 12px -4px color-mix(in srgb,var(--accent) 55%,transparent)}
-.fontGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(105px,1fr));gap:8px}
-.fontOpt{display:flex;flex-direction:column;justify-content:center;text-align:center;min-height:56px;gap:3px;padding:8px 8px;border:1px solid var(--line);border-radius:11px;background:var(--card);cursor:pointer;color:var(--ink)}
-.fontOpt>span:first-child{font-size:19px}
-.fontOpt .fname{font-size:11.5px;font-weight:700;color:var(--muted);font-family:var(--font,inherit)!important}
-.fontOpt.active{border-color:var(--accent);background:var(--soft);color:var(--accent)}
-.fontOpt.active .fname{color:var(--accent)}
 .sizeRow{display:flex;align-items:center;gap:12px;margin-top:14px;max-width:420px}
 .sizeRow input[type=range]{-webkit-appearance:none;appearance:none;height:6px;border-radius:99px;background:color-mix(in srgb,var(--ink) 12%,var(--card));outline:none;padding:0}
 .sizeRow input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--accent);cursor:pointer;box-shadow:var(--shadow-sm);border:2px solid var(--card)}
@@ -1610,7 +1604,7 @@ body:has(#dashboard.active) .top,body:has(#charts.active) .top{flex:0 0 auto}
 #settings .dataBackupCard{grid-area:data;width:auto;min-width:0}
 .workspaceCard{grid-area:workspace}
 #settings .scopeCard{grid-area:scope;width:auto;min-width:0}
-.appearanceGrid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(260px,1fr);gap:18px}
+.appearanceGrid{display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
 .appearanceBlock,.workspaceBlock{min-width:0}
 .appearanceBlock h3,.workspaceBlock h3{margin-bottom:8px}
 .appearanceOptions{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
@@ -1806,13 +1800,10 @@ html[data-family=claude] .toastUndo:hover{background:var(--hover)}
 html[data-family=claude] .tooltip{background:var(--tip-bg);color:var(--tip-fg);border-radius:8px;font-size:12px;box-shadow:var(--shadow-md)}
 html[data-family=claude] .lockBanner{border:.5px solid color-mix(in srgb,var(--warn) 40%,var(--line));border-radius:10px;font-weight:500}
 html[data-family=claude] .loadingBar::before{background:var(--a2)}
-/* Settings: theme and typeface pickers. */
+/* Settings: theme picker. */
 html[data-family=claude] :is(.swatch,.fontOpt){border:.5px solid var(--line);font-weight:500}
 html[data-family=claude] .swatch:hover,html[data-family=claude] .fontOpt:hover{border-color:var(--line-strong)}
 html[data-family=claude] .swatch.active{outline:2px solid var(--ink);outline-offset:1px}
-html[data-family=claude] .fontOpt.active{border-color:var(--ink);background:var(--active);color:var(--ink)}
-html[data-family=claude] .fontOpt.active .fname{color:var(--ink)}
-html[data-family=claude] .fontOpt .fname{font-weight:500}
 html[data-family=claude] .scanDivider{background:var(--line)}
 html[data-family=claude] .scanDivider:is(:hover,.dragging){background:var(--a2)}
 /* The few visible scrollbars: quiet neutral thumbs, no coloured track. */
@@ -1825,12 +1816,12 @@ html[data-family=claude] :is(.dashCardsPane #items,#allModal>.modal>.panel,#stat
 <div class="app">
   <aside>
     <nav>
-      <button class="active" data-v="dashboard">Dashboard</button>
-      <button data-v="scanops">Scan/Catalog</button>
-      <button id="navCount" data-v="stockcount">Count</button>
-      <button data-v="activity">History</button>
-      <button data-v="charts">Charts</button>
-      <button data-v="settings">Settings</button>
+      <button class="active" data-v="dashboard"><span class="navLbl" data-label="Dashboard">Dashboard</span></button>
+      <button data-v="scanops"><span class="navLbl" data-label="Scan/Catalog">Scan/Catalog</span></button>
+      <button id="navCount" data-v="stockcount"><span class="navLbl" data-label="Count">Count</span></button>
+      <button data-v="activity"><span class="navLbl" data-label="History">History</span></button>
+      <button data-v="charts"><span class="navLbl" data-label="Charts">Charts</span></button>
+      <button data-v="settings"><span class="navLbl" data-label="Settings">Settings</span></button>
     </nav>
   </aside>
   <main id="main">
@@ -1977,7 +1968,6 @@ html[data-family=claude] :is(.dashCardsPane #items,#allModal>.modal>.panel,#stat
           <div class="card settingsCard appearanceCard">
             <div class="appearanceGrid">
               <div class="appearanceBlock"><h3>Theme</h3><div id="themeGrid" class="swatchGrid"></div></div>
-              <div class="appearanceBlock"><h3>Typeface</h3><div id="fontList" class="fontGrid"></div></div>
             </div>
             <div class="appearanceOptions">
               <label class="switch"><input id="motionToggle" type="checkbox"><span class="track"></span><span class="swLbl">Motion override</span></label>
@@ -3685,13 +3675,16 @@ window.addEventListener('blur',()=>{document.documentElement.dataset.motionPause
 window.addEventListener('focus',syncMotionPause);
 syncMotionPause();
 async function setUiScaleFactor(f){f=snapUiScale(f);try{localStorage.setItem('invUiScaleFactor',String(f))}catch{}applyScale();if(window.desk?.resizeWindow){await desk.resizeWindow(f);fixViewportHeight();const av=document.querySelector('.view.active')?.id;if(av==='activity'){remeasureMainHist();renderHist()}else if(av==='scanops'){remeasureScanCat();remeasureScanHist();renderCat();renderScanRecent()}else if(av==='stockcount'){renderStockCount()}}}
-function applyAppearance(){const s=db.settings,root=document.documentElement;root.dataset.family=s.theme||'glass';root.dataset.mode=s.mode||'light';applyGraphics();root.style.setProperty('--font',(FONTS.find(f=>f.id===s.font)||FONTS[0]).stack);root.style.setProperty('--fs',(s.fontSize||14)+'px');applyScale();if((s.theme||'glass')==='genshin'){applyGenshinElement();buildGenshinStars();gsReset()}else gsReset();renderAppearance()}
+function applyAppearance(){const s=db.settings,root=document.documentElement;root.dataset.family=s.theme||'glass';root.dataset.mode=s.mode||'light';applyGraphics();root.style.setProperty('--font',(FONTS.find(f=>f.id===themeFont(s.theme))||FONTS[0]).stack);root.style.setProperty('--fs',(s.fontSize||14)+'px');applyScale();if((s.theme||'glass')==='genshin'){applyGenshinElement();buildGenshinStars();gsReset()}else gsReset();renderAppearance()}
+/* The typeface follows the theme (there is no separate picker): Claude uses
+   Claude Sans, every other theme SF Pro; Cyberpunk, Genshin and ZZZ then
+   apply their own display faces in CSS. settings.font is still written so
+   older app versions on other computers show the same face. */
+const themeFont=theme=>theme==='claude'?'styrene':'sfpro';
 function renderAppearance(){
-  const fam=db.settings.theme||'glass',mode=db.settings.mode||'light',font=db.settings.font||'sfpro',fs=db.settings.fontSize||14;
+  const fam=db.settings.theme||'glass';
   $('#themeGrid').innerHTML=FAMILIES.map(f=>`<button type="button" class="swatch ${fam===f.id?'active':''}" data-fam="${f.id}"><span class="swatchPreview${f.logo?' logoPreview':''}" style="background:${f.logo?(f.logoBg||'var(--card)'):(f.swatch||`linear-gradient(135deg,${f.a},${f.a2})`)}">${f.logo?`<i class="swatchLogo" aria-hidden="true" style="--logo:url('${f.logo}');--logoColor:${f.logoColor||'#fff'}"></i>`:''}</span><span>${f.label}</span></button>`).join('');
-  $$('#themeGrid .swatch').forEach(b=>b.onclick=async()=>{const famDef=FAMILIES.find(f=>f.id===b.dataset.fam);db.settings.theme=b.dataset.fam;if(b.dataset.fam==='claude')db.settings.font='styrene';if(b.dataset.fam==='glass'||b.dataset.fam==='liquid')db.settings.font='sfpro';if(famDef?.defaultMode){db.settings.mode=famDef.defaultMode;db.settings.modeChosen=true}applyAppearance();if(st.owned)await commit();else toast('Enable editing once to save this theme for every computer.',false,{title:'Theme preview only'})});
-  $('#fontList').innerHTML=FONTS.map(f=>`<button type="button" class="fontOpt ${font===f.id?'active':''}" data-font="${f.id}" style="font-family:${f.stack}"><span>Aa</span><span class="fname">${f.label}</span></button>`).join('');
-  $$('#fontList .fontOpt').forEach(b=>b.onclick=async()=>{db.settings.font=b.dataset.font;applyAppearance();if(st.owned)await commit();else toast('Enable editing once to save this typeface for every computer.',false,{title:'Typeface preview only'})});
+  $$('#themeGrid .swatch').forEach(b=>b.onclick=async()=>{const famDef=FAMILIES.find(f=>f.id===b.dataset.fam);db.settings.theme=b.dataset.fam;db.settings.font=themeFont(b.dataset.fam);if(famDef?.defaultMode){db.settings.mode=famDef.defaultMode;db.settings.modeChosen=true}applyAppearance();if(st.owned)await commit();else toast('Enable editing once to save this theme for every computer.',false,{title:'Theme preview only'})});
 }
 function renderQuickLogout(){const m=db.settings.quickLogoutMode||'fefo';$$('#qlMode button').forEach(b=>b.classList.toggle('active',b.dataset.mode===m))}
 $$('#qlMode button').forEach(b=>b.onclick=async()=>{db.settings.quickLogoutMode=b.dataset.mode;renderQuickLogout();if(st.owned)await commit();toast(`Quick Logout now uses ${b.dataset.mode==='fifo'?'earliest entry (FIFO)':'earliest expiry (FEFO)'}`)});

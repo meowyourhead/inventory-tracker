@@ -115,8 +115,8 @@ Running clients pick the release up on their next check.
   Emerald now map to Liquid. Cyberpunk and Genshin are faithful
   ports of the Kanban reference artstyle: Rajdhani + Share Tech Mono with
   crimson/cyan HUD styling, and HYWenHei + Alegreya Sans with slate panels,
-  cream selection rows and gold diamonds. Both override the Typeface setting;
-  all other themes honour it. ZZZ is a port of the Zenless UI component kit
+  cream selection rows and gold diamonds; both use their own typefaces.
+  There is no typeface picker: Claude uses Claude Sans, the rest SF Pro. ZZZ is a port of the Zenless UI component kit
   (ChrisChan13/zenless-ui): glossy black panels, hard black outlines, blue
   primary controls, checkerboard button fills, pill inputs, hazard striping and
   the ZZZ wordmark, based on
