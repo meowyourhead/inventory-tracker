@@ -630,6 +630,20 @@ library is involved.
 - Both reworked themes override the user Typeface setting on purpose: their
   letterforms are part of the look. The stored preference is untouched, so
   other themes still honour it.
+- Claude (2026-11-18) is modelled on the claude.ai chat UI: paper `#faf9f5` /
+  sidebar `#f5f4ed` / white cards (dark: `#262624` / `#1f1e1d` / `#30302e`),
+  15%-ink hairline borders, clay `#c96442` only on primary actions and the
+  spark mark, neutral ink for selected states, and claude.ai's blue `#2c84db`
+  for focus rings and switches. Its block sits last in the `<style>` so it wins
+  ties with base rules. claude.ai's Anthropic Sans/Serif are proprietary, so
+  the exe embeds OFL stand-ins chosen by side-by-side comparison: Hanken
+  Grotesk (`fonts/hanken-grotesk-latin-wght-normal.woff2`, family
+  `"Claude Sans"`) and Source Serif 4 (`fonts/source-serif-4-latin-opsz-normal.woff2`,
+  family `"Claude Serif"`), served at `/fonts/hanken-grotesk.woff2` and
+  `/fonts/source-serif-4.woff2`. The `styrene` and `anthropicserif` Typeface
+  options (labels now "Claude Sans"/"Claude Serif") resolve to them. The serif
+  is used only for the greeting title, the wordmark and quantity/KPI numbers;
+  nav rows get CSS-mask icons keyed on `data-v`, and the sidebar is 128 px.
 - Do not add ambient corner glows or radial colour washes to any theme; the
   shared `body` background is flat `var(--bg)`. Textures (Glass grain,
   Cyberpunk scanlines/rails, the Genshin starfield) are allowed.

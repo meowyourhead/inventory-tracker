@@ -52,6 +52,10 @@ const SHARE_TECH_MONO: &[u8] = include_bytes!("../fonts/share-tech-mono-latin-40
 const ALEGREYA_400: &[u8] = include_bytes!("../fonts/alegreya-sans-latin-400-normal.woff2");
 const ALEGREYA_500: &[u8] = include_bytes!("../fonts/alegreya-sans-latin-500-normal.woff2");
 const ALEGREYA_700: &[u8] = include_bytes!("../fonts/alegreya-sans-latin-700-normal.woff2");
+// Claude theme: open (OFL) stand-ins for claude.ai's proprietary Anthropic
+// Sans / Anthropic Serif. Both are variable fonts (wght, plus opsz for serif).
+const HANKEN_GROTESK: &[u8] = include_bytes!("../fonts/hanken-grotesk-latin-wght-normal.woff2");
+const SOURCE_SERIF_4: &[u8] = include_bytes!("../fonts/source-serif-4-latin-opsz-normal.woff2");
 const CURSOR_DEFAULT: &[u8] = include_bytes!("../cursors/gi_arrow.cur");
 const CURSOR_LINK: &[u8] = include_bytes!("../cursors/gi_link.cur");
 const CURSOR_BUSY: &[u8] = include_bytes!("../cursors/gi_busy.cur");
@@ -282,6 +286,8 @@ fn static_asset(path: &str) -> Option<(&'static [u8], &'static str)> {
         "/fonts/alegreya-sans-400.woff2" => (ALEGREYA_400, "font/woff2"),
         "/fonts/alegreya-sans-500.woff2" => (ALEGREYA_500, "font/woff2"),
         "/fonts/alegreya-sans-700.woff2" => (ALEGREYA_700, "font/woff2"),
+        "/fonts/hanken-grotesk.woff2" => (HANKEN_GROTESK, "font/woff2"),
+        "/fonts/source-serif-4.woff2" => (SOURCE_SERIF_4, "font/woff2"),
         "/cursors/gi_arrow.cur" => (CURSOR_DEFAULT, "image/x-icon"),
         "/cursors/gi_link.cur" => (CURSOR_LINK, "image/x-icon"),
         "/cursors/gi_busy.cur" => (CURSOR_BUSY, "image/x-icon"),

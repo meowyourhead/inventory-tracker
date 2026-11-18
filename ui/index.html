@@ -16,6 +16,11 @@
 @font-face{font-family:"Alegreya Sans";src:url("/fonts/alegreya-sans-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:"Alegreya Sans";src:url("/fonts/alegreya-sans-500.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
 @font-face{font-family:"Alegreya Sans";src:url("/fonts/alegreya-sans-700.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+/* Claude theme faces: open (OFL) stand-ins for claude.ai's Anthropic Sans and
+   Anthropic Serif — Hanken Grotesk (variable wght) and Source Serif 4
+   (variable wght + optical size). */
+@font-face{font-family:"Claude Sans";src:url("/fonts/hanken-grotesk.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Claude Serif";src:url("/fonts/source-serif-4.woff2") format("woff2");font-weight:200 900;font-style:normal;font-display:swap}
 *,*::before,*::after{box-sizing:border-box}
 html{--radius:16px;--radius-sm:10px;--accent:#0284c7;--a2:#7dd3fc;--vh-fix:946px}
 html:has(#activity.active),html:has(#stockcount.active){overflow:hidden}
@@ -33,13 +38,9 @@ html[data-family=nord]{--accent:#5e81ac;--a2:#8fbcbc}
 html[data-family=slate]{--accent:#38506b;--a2:#5c9bd6}
 html[data-family=dusk]{--accent:#403d88;--a2:#8b639b}
 html[data-family=sangria]{--accent:#5d3140;--a2:#cf4173}
-html[data-family=claude]{--accent:#cc785c;--a2:#d4a27f}
+html[data-family=claude]{--accent:#c96442;--a2:#d97757;--radius:12px;--radius-sm:8px}
 html[data-family=liquid]{--accent:#0071e3;--a2:#64d2ff;--radius:24px;--radius-sm:14px;accent-color:var(--accent)}
 html[data-family=pink]{--accent:#db2777;--a2:#f9a8d4}
-/* Claude theme: warm paper-like surface instead of the shared cool
-   light/dark base, matching Anthropic's actual product palette. */
-html[data-family=claude][data-mode=light]{--bg:#faf9f5;--card:#fffefc;--line:#e5e0d6}
-html[data-family=claude][data-mode=dark]{--bg:#171614;--card:#211f1c;--line:#38352f}
 /* Pink theme: soft blush surface with a playful, girly accent palette. */
 html[data-family=pink][data-mode=light]{--bg:#fff0f7;--card:#fffbfd;--line:#fbcfe8}
 html[data-family=pink][data-mode=dark]{--bg:#2a1220;--card:#33172a;--line:#4a1f38}
@@ -112,13 +113,6 @@ html[data-family=dusk][data-mode=dark] .brandtext{color:#f2c9d9}
 html,body{height:100%}
 body{position:relative;margin:0;color:var(--ink);font:var(--fs,14px)/1.43 var(--font,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif);font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased;background:var(--bg)}
 body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0;transition:opacity .4s}
-/* Claude theme: claude.ai's real interface is a flat, unadorned cream/
-   charcoal surface — no decorative gradient wash like the other themes. */
-html[data-family=claude] body{background:var(--bg)}
-/* Claude theme: pairs a serif display face (echoing claude.ai's editorial
-   headline typography) with the sans body font used everywhere else,
-   rather than a single typeface throughout. */
-html[data-family=claude] .brandtext,html[data-family=claude] #title,html[data-family=claude] .qty{font-family:"AnthropicSerif-Display","Anthropic Serif Display",Georgia,Cambria,serif;font-weight:500;letter-spacing:-.01em}
 /* Cyberpunk: Night City backdrop — crimson rails, top glow, CRT scanlines and
    a fixed corner HUD frame (ported from the Kanban reference). */
 html[data-family=cyberpunk][data-mode=dark]{--cp-vignette:rgba(0,0,0,.55)}
@@ -1622,6 +1616,154 @@ html[data-family=genshin] [data-drag]{cursor:url("/cursors/gi_link.cur") 0 0,mov
 html[data-family=genshin] .hvCatcher{cursor:url("/cursors/gi_link.cur") 0 0,crosshair!important}
 html[data-family=genshin] :is(button,.btn):disabled,html[data-family=genshin] .btn[aria-disabled="true"],html[data-family=genshin] .pager button:disabled,html[data-family=genshin] .scaleResetBtn:disabled{cursor:url("/cursors/gi_busy.cur") 0 0,not-allowed!important}
 html[data-family=genshin] ::-webkit-slider-thumb{cursor:url("/cursors/gi_link.cur") 0 0,pointer!important}
+/* ------------------------------------------------------------------ Claude
+   Modelled on the claude.ai chat interface: warm paper and charcoal surfaces,
+   hairline 15%-ink borders, a sans UI at light weights, and the serif kept
+   for the greeting, the wordmark and the big quantities. Clay is reserved for
+   primary actions and the spark mark; selected states are neutral ink, and
+   focus rings and switches use claude.ai's secondary blue. Kept last so it
+   wins ties with the base component rules above. */
+html[data-family=claude][data-mode=light]{--bg:#faf9f5;--card:#ffffff;--ink:#141413;--ink2:#3d3d3a;--muted:#73726c;--line:rgba(31,30,29,.15);--line-strong:rgba(31,30,29,.3);--side:#f5f4ed;--hover:rgba(31,30,29,.045);--active:rgba(31,30,29,.075);--well:#f0eee6;--accent:#c96442;--accent-hover:#b5583a;--a2:#d97757;--focus:#2c84db;--good:#3d7a2a;--warn:#a05e03;--bad:#b53333;--tip-bg:#141413;--tip-fg:#faf9f5;--shadow-sm:0 1px 2px rgba(0,0,0,.025);--shadow-md:0 .25rem 1.25rem rgba(0,0,0,.06),0 0 0 .5px rgba(31,30,29,.08);--shadow-lg:0 1rem 3rem -.75rem rgba(0,0,0,.16),0 .25rem 1.25rem rgba(0,0,0,.05);--composer:0 .25rem 1.25rem rgba(0,0,0,.035)}
+html[data-family=claude][data-mode=dark]{--bg:#262624;--card:#30302e;--ink:#faf9f5;--ink2:#c2c0b6;--muted:#9c9a92;--line:rgba(222,220,209,.15);--line-strong:rgba(222,220,209,.3);--side:#1f1e1d;--hover:rgba(250,249,245,.05);--active:rgba(250,249,245,.085);--well:#1f1e1d;--accent:#c96442;--accent-hover:#d97757;--a2:#d97757;--focus:#4a9be6;--good:#8cc265;--warn:#e3a54a;--bad:#e06464;--tip-bg:#faf9f5;--tip-fg:#141413;--shadow-sm:0 1px 2px rgba(0,0,0,.2);--shadow-md:0 .25rem 1.25rem rgba(0,0,0,.28),0 0 0 .5px rgba(222,220,209,.1);--shadow-lg:0 1rem 3rem -.75rem rgba(0,0,0,.6),0 .25rem 1.25rem rgba(0,0,0,.25);--composer:0 .25rem 1.25rem rgba(0,0,0,.2)}
+html[data-family=claude]{--soft:var(--active);--qcbg:color-mix(in srgb,var(--a2) 14%,var(--card));--serif:"Claude Serif","AnthropicSerif-Display",Georgia,Cambria,serif;accent-color:var(--focus)}
+html[data-family=claude] body{background:var(--bg);font-weight:400;-webkit-font-smoothing:antialiased}
+html[data-family=claude] ::selection{background:color-mix(in srgb,var(--a2) 28%,transparent);color:var(--ink)}
+html[data-family=claude] :focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+/* Sidebar: slightly darker paper, hairline edge, icon + label rows. */
+html[data-family=claude] .app{grid-template-columns:128px 1fr}
+@media(max-width:1000px){html[data-family=claude] .app{grid-template-columns:1fr}}
+html[data-family=claude] aside{background:var(--side);border-right:.5px solid var(--line);padding:14px 8px}
+html[data-family=claude] .brandtext{font-family:var(--serif);font-size:17px;font-weight:500;letter-spacing:-.025em;color:var(--ink);padding:3px 4px 16px 6px;white-space:nowrap}
+html[data-family=claude] .brandtext::before{content:'';display:inline-block;vertical-align:-.1em;margin-right:7px;width:15px;height:15px;background:var(--a2);-webkit-mask:var(--cl-spark) center/contain no-repeat;mask:var(--cl-spark) center/contain no-repeat}
+html[data-family=claude]{--cl-spark:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.6' stroke-linecap='round'%3E%3Cpath d='M12 2.2v6.6M12 15.2v6.6M2.2 12h6.6M15.2 12h6.6M5.1 5.1l4.6 4.6M14.3 14.3l4.6 4.6M18.9 5.1l-4.6 4.6M9.7 14.3l-4.6 4.6'/%3E%3C/svg%3E")}
+html[data-family=claude] nav{gap:1px}
+html[data-family=claude] nav button{gap:9px;padding:7px 8px;border-radius:8px;font-size:13.5px;font-weight:400;color:var(--ink2);transition:background-color .12s,color .12s}
+html[data-family=claude] nav button:hover{background:var(--hover);color:var(--ink);font-weight:400}
+html[data-family=claude] nav button.active{background:var(--active);color:var(--ink);font-weight:500}
+html[data-family=claude] nav button::before{content:'';flex:none;width:16px;height:16px;background:currentColor;opacity:.85;-webkit-mask:var(--ic) center/contain no-repeat;mask:var(--ic) center/contain no-repeat}
+html[data-family=claude] nav button[data-v=dashboard]{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.7' stroke-linejoin='round'%3E%3Crect x='3.5' y='3.5' width='7' height='7' rx='1.6'/%3E%3Crect x='13.5' y='3.5' width='7' height='7' rx='1.6'/%3E%3Crect x='3.5' y='13.5' width='7' height='7' rx='1.6'/%3E%3Crect x='13.5' y='13.5' width='7' height='7' rx='1.6'/%3E%3C/svg%3E")}
+html[data-family=claude] nav button[data-v=scanops]{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 8.5V6a2 2 0 0 1 2-2h2.5M15.5 4H18a2 2 0 0 1 2 2v2.5M20 15.5V18a2 2 0 0 1-2 2h-2.5M8.5 20H6a2 2 0 0 1-2-2v-2.5M8 9v6M11 9v6M14 9v6M17 9v6'/%3E%3C/svg%3E")}
+html[data-family=claude] nav button[data-v=stockcount]{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 4.5H7a2 2 0 0 0-2 2V19a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6.5a2 2 0 0 0-2-2h-2'/%3E%3Crect x='9' y='3' width='6' height='3.2' rx='1'/%3E%3Cpath d='m9 13.5 2.2 2.2 4-4.2'/%3E%3C/svg%3E")}
+html[data-family=claude] nav button[data-v=activity]{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3.6 12a8.4 8.4 0 1 0 2.5-6'/%3E%3Cpath d='M3.5 4v4h4M12 8v4.3l2.8 1.8'/%3E%3C/svg%3E")}
+html[data-family=claude] nav button[data-v=charts]{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.7' stroke-linecap='round'%3E%3Cpath d='M4 20h16M7 16.5V11M12 16.5V5.5M17 16.5v-8'/%3E%3C/svg%3E")}
+html[data-family=claude] nav button[data-v=settings]{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.7' stroke-linecap='round'%3E%3Cpath d='M4 7h9M18 7h2M4 17h3M12 17h8'/%3E%3Ccircle cx='15.5' cy='7' r='2.4'/%3E%3Ccircle cx='9.5' cy='17' r='2.4'/%3E%3C/svg%3E")}
+/* Header: the claude.ai greeting — light serif led by the clay spark. */
+html[data-family=claude] #title{font-family:var(--serif);font-size:27px;font-weight:330;letter-spacing:-.022em;line-height:1.2;color:var(--ink)}
+html[data-family=claude] #title::before{content:'';display:inline-block;vertical-align:-.12em;margin-right:12px;width:24px;height:24px;background:var(--a2);-webkit-mask:var(--cl-spark) center/contain no-repeat;mask:var(--cl-spark) center/contain no-repeat}
+html[data-family=claude] .userName{color:inherit;font-weight:inherit}
+html[data-family=claude] .editState{font-weight:inherit;margin-left:.25em}
+html[data-family=claude] .editState.on{color:var(--accent)}
+html[data-family=claude] .editState.off{color:var(--muted)}
+html[data-family=claude] .editNote{font-family:var(--font);font-weight:400;font-size:13px;letter-spacing:0;margin-left:.3em}
+html[data-family=claude] .clock .ctime{font-size:17px;font-weight:500;letter-spacing:0}
+html[data-family=claude] .clock .cdate{font-size:12px;font-weight:400}
+/* Controls: hairline buttons, ghost icon buttons, clay only for primary. */
+html[data-family=claude] .btn{border:.5px solid var(--line-strong);background:var(--card);color:var(--ink);border-radius:8px;font-weight:500;box-shadow:none;transition:background-color .12s,border-color .12s,color .12s}
+html[data-family=claude] .btn:hover{background:color-mix(in srgb,var(--ink) 4%,var(--card));border-color:var(--line-strong)}
+html[data-family=claude] .btn:active{transform:none;background:color-mix(in srgb,var(--ink) 7%,var(--card))}
+html[data-family=claude] .btn.primary,html[data-family=claude] .scanActions .btn{background:var(--accent);border-color:var(--accent);color:#fff}
+html[data-family=claude] .btn.primary:hover,html[data-family=claude] .scanActions .btn:hover{filter:none;background:var(--accent-hover);border-color:var(--accent-hover)}
+html[data-family=claude] .btn.danger{color:var(--bad)}
+html[data-family=claude] .btn.danger:hover{background:color-mix(in srgb,var(--bad) 7%,var(--card));border-color:color-mix(in srgb,var(--bad) 35%,var(--line))}
+html[data-family=claude] .btn.quiet{background:transparent;border-color:transparent}
+html[data-family=claude] .btn.quiet:hover{background:var(--hover)}
+html[data-family=claude] .btn.small{border-radius:7px}
+html[data-family=claude] .btn:disabled{opacity:.45}
+html[data-family=claude] .logoutBtn{border-radius:7px;font-weight:500}
+html[data-family=claude] .logoutBtn:hover{filter:none;background:var(--accent-hover)!important;border-color:var(--accent-hover)!important}
+html[data-family=claude] .quickEntry{font-weight:500;border-radius:7px}
+html[data-family=claude] .iconBtn{background:transparent;border-color:transparent;box-shadow:none;border-radius:8px;color:var(--ink2)}
+html[data-family=claude] .iconBtn:hover{background:var(--hover);border-color:transparent;color:var(--ink)}
+html[data-family=claude] .expandBtn{background:transparent;border-color:transparent;border-radius:7px}
+html[data-family=claude] .expandBtn:hover{background:var(--hover);border-color:transparent;color:var(--ink)}
+html[data-family=claude] .badge{background:var(--accent);font-weight:600;box-shadow:0 0 0 2px var(--bg)}
+html[data-family=claude] .helpDot{font-weight:600;border:.5px solid var(--line-strong)}
+html[data-family=claude] .resetBtn{font-weight:500;border-radius:8px}
+html[data-family=claude] .pager button{border:.5px solid var(--line);border-radius:7px;color:var(--ink2)}
+html[data-family=claude] .pager button:hover:not(:disabled){background:var(--hover)}
+html[data-family=claude] .pager button.active{background:var(--active);border-color:var(--line-strong);color:var(--ink);font-weight:600}
+/* Segmented controls and tabs: a sunken well with a raised white thumb. */
+html[data-family=claude] :is(.segToggle,.tabs,.scopeChooser,.scModeToggle){background:var(--well);border:.5px solid var(--line);border-radius:10px;padding:3px}
+html[data-family=claude] :is(.segToggle,.tabs,.scopeChooser) button,html[data-family=claude] .scModeBtn{border-radius:7px;font-weight:500;color:var(--muted)}
+html[data-family=claude] :is(.segToggle,.tabs,.scopeChooser) button:hover,html[data-family=claude] .scModeBtn:hover{color:var(--ink)}
+html[data-family=claude] :is(.segToggle button.active,.tabs .active,.scopeChooser button.active,.scModeBtn.active){background:var(--card);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.06),0 0 0 .5px var(--line)}
+html[data-family=claude][data-mode=dark] :is(.segToggle button.active,.tabs .active,.scopeChooser button.active,.scModeBtn.active){background:#3a3a37}
+/* Chips: claude.ai's bordered suggestion chips. */
+html[data-family=claude] .token span{border:.5px solid var(--line-strong);border-radius:8px;background:var(--card);color:var(--ink2);font-weight:500}
+html[data-family=claude] .token:hover span{background:color-mix(in srgb,var(--ink) 4%,var(--card))}
+html[data-family=claude] .token input:checked+span{background:var(--active);border-color:var(--line-strong);color:var(--ink)}
+html[data-family=claude] .catToken{border:.5px solid var(--line-strong);border-radius:8px;font-weight:500;color:var(--ink2)}
+/* Inputs: white fields, hairline border, blue focus ring. Search fields get the
+   composer's soft lift. */
+html[data-family=claude] :is(input,select,textarea){border:.5px solid var(--line-strong);border-radius:8px;background:var(--card);color:var(--ink)}
+html[data-family=claude] :is(input,select,textarea):hover{border-color:color-mix(in srgb,var(--ink) 40%,transparent)}
+html[data-family=claude] :is(input,select,textarea):focus{outline:none;border-color:var(--focus);box-shadow:0 0 0 3px color-mix(in srgb,var(--focus) 18%,transparent)}
+html[data-family=claude] input::placeholder{color:var(--muted);opacity:.85}
+html[data-family=claude] input.opt,html[data-family=claude] select.opt{background:color-mix(in srgb,var(--ink) 3%,var(--card))}
+html[data-family=claude] .searchWrap input{border-radius:12px;box-shadow:var(--composer)}
+html[data-family=claude] .searchWrap input:focus{box-shadow:var(--composer),0 0 0 3px color-mix(in srgb,var(--focus) 18%,transparent)}
+html[data-family=claude] label{font-weight:500;letter-spacing:0;color:var(--ink2)}
+html[data-family=claude] .switch{font-weight:500}
+html[data-family=claude] .switch .track{background:color-mix(in srgb,var(--ink) 18%,transparent)}
+html[data-family=claude] .switch input:checked+.track{background:var(--focus)}
+html[data-family=claude] .sizeRow input[type=range]::-webkit-slider-thumb{background:var(--card);border:.5px solid var(--line-strong);box-shadow:0 1px 3px rgba(0,0,0,.18)}
+html[data-family=claude] .sizeRow input[type=range]{background:color-mix(in srgb,var(--ink) 14%,transparent)}
+/* Surfaces: flat white cards with hairline borders; hover lifts by shadow only. */
+html[data-family=claude] .card{border:.5px solid var(--line);border-radius:12px;box-shadow:var(--shadow-sm)}
+html[data-family=claude] .item:hover,html[data-family=claude] .kpi:hover{transform:none;border-color:var(--line-strong);box-shadow:var(--shadow-md)}
+html[data-family=claude] .itemName h3{font-weight:600;letter-spacing:-.005em}
+html[data-family=claude] .qty{font-family:var(--serif);font-weight:440;letter-spacing:-.02em}
+html[data-family=claude] .kpi .kVal{font-family:var(--serif);font-weight:460;letter-spacing:-.02em}
+html[data-family=claude] :is(.panel h3,.setCard h3,.settingsCard h3,.notifHd h3,.hd h3){font-weight:600;letter-spacing:-.005em}
+html[data-family=claude] :is(.hd h2,.smodal h2){font-weight:560;letter-spacing:-.01em}
+html[data-family=claude] :is(.kpi .kLabel,.toastTitle,.notifItem .nm){font-weight:600}
+html[data-family=claude] .bar,html[data-family=claude] .uBar{border-radius:6px}
+html[data-family=claude] :is(.topFill,.estFill){background:var(--a2)}
+html[data-family=claude] .pill{border-radius:6px;font-weight:500;padding:2px 8px}
+html[data-family=claude] .pill.mini{padding:1px 6px}
+html[data-family=claude] .pill.neutral{background:var(--active);color:var(--ink2)}
+/* Tables: sentence-case headers, hairline rules, neutral hover. */
+html[data-family=claude] th,html[data-family=claude] .cfTable th{text-transform:none;letter-spacing:0;font-size:11.5px;font-weight:500;color:var(--muted)}
+html[data-family=claude] th.sortable:hover{color:var(--ink)}
+html[data-family=claude] :is(th,td){border-bottom:.5px solid var(--line)}
+html[data-family=claude] tbody tr:hover td{background:var(--hover)}
+html[data-family=claude] :is(.notifSec,.estHead){text-transform:none;letter-spacing:0;font-size:11.5px;font-weight:500}
+html[data-family=claude] :is(.backupLocLabel,.batchRowDetails label,.colorMenuLabel,.updInfo span){text-transform:none;letter-spacing:0;font-size:11px;font-weight:500}
+html[data-family=claude] .backToTopBtn{text-transform:none;letter-spacing:0;font-size:10px;font-weight:500;border:.5px solid var(--line-strong);color:var(--ink2);box-shadow:var(--shadow-md)}
+html[data-family=claude] .backToTopBtn:hover{background:var(--card);border-color:var(--line-strong);color:var(--ink)}
+/* Popovers and menus: white, 12px corners, soft lift; rows highlight neutral. */
+html[data-family=claude] :is(.notifPanel,.colPick,.chartComboMenu,.comboDropdown,.expiryPopover){border:.5px solid var(--line);border-radius:12px;box-shadow:var(--shadow-lg)}
+html[data-family=claude] :is(.notifItem,.chartComboItem,.topRow,.estRow){border-radius:8px}
+html[data-family=claude] :is(.notifItem,.topRow,.estRow):hover,html[data-family=claude] :is(.chartComboItem:hover,.chartComboItem.active){background:var(--hover)}
+html[data-family=claude] .chartComboItem.selected{color:var(--ink);font-weight:600}
+html[data-family=claude] .chartComboBtn{border:.5px solid var(--line-strong);border-radius:8px}
+/* Dialogs: paper sheet with 16px corners over an unblurred dim. */
+html[data-family=claude] .modalbg{background:rgba(0,0,0,.32);backdrop-filter:none;-webkit-backdrop-filter:none}
+html[data-family=claude][data-mode=dark] .modalbg{background:rgba(0,0,0,.55)}
+html[data-family=claude] .modal{background:var(--bg);border:.5px solid var(--line);border-radius:16px;box-shadow:var(--shadow-lg)}
+html[data-family=claude] .hd{border-bottom:.5px solid var(--line)}
+html[data-family=claude] .entry{border:.5px solid var(--line);border-radius:12px;background:var(--card)}
+html[data-family=claude] .cfTableWrap{border:.5px solid var(--line);border-radius:10px}
+html[data-family=claude] .toast{border:.5px solid var(--line);border-radius:12px}
+html[data-family=claude] .toastIco{background:var(--well);border-radius:8px}
+html[data-family=claude] .toastUndo{border:.5px solid var(--line-strong);color:var(--ink);font-weight:500;border-radius:8px}
+html[data-family=claude] .toastUndo:hover{background:var(--hover)}
+html[data-family=claude] .tooltip{background:var(--tip-bg);color:var(--tip-fg);border-radius:8px;font-size:12px;box-shadow:var(--shadow-md)}
+html[data-family=claude] .lockBanner{border:.5px solid color-mix(in srgb,var(--warn) 40%,var(--line));border-radius:10px;font-weight:500}
+html[data-family=claude] .loadingBar::before{background:var(--a2)}
+/* Settings: theme and typeface pickers. */
+html[data-family=claude] :is(.swatch,.fontOpt){border:.5px solid var(--line);font-weight:500}
+html[data-family=claude] .swatch:hover,html[data-family=claude] .fontOpt:hover{border-color:var(--line-strong)}
+html[data-family=claude] .swatch.active{outline:2px solid var(--ink);outline-offset:1px}
+html[data-family=claude] .fontOpt.active{border-color:var(--ink);background:var(--active);color:var(--ink)}
+html[data-family=claude] .fontOpt.active .fname{color:var(--ink)}
+html[data-family=claude] .fontOpt .fname{font-weight:500}
+html[data-family=claude] .scanDivider{background:var(--line)}
+html[data-family=claude] .scanDivider:is(:hover,.dragging){background:var(--a2)}
+/* The few visible scrollbars: quiet neutral thumbs, no coloured track. */
+html[data-family=claude] :is(.dashCardsPane #items,#allModal>.modal>.panel,#statModal #statBody)::-webkit-scrollbar-track{background:transparent;box-shadow:none}
+html[data-family=claude] :is(.dashCardsPane #items,#allModal>.modal>.panel,#statModal #statBody)::-webkit-scrollbar-thumb{background:color-mix(in srgb,var(--ink) 20%,transparent);border:2px solid transparent;background-clip:padding-box}
+html[data-family=claude] :is(.dashCardsPane #items,#allModal>.modal>.panel,#statModal #statBody)::-webkit-scrollbar-thumb:hover{background:color-mix(in srgb,var(--ink) 34%,transparent);border:2px solid transparent;background-clip:padding-box}
 </style>
 </head>
 <body>
@@ -2077,7 +2219,7 @@ const FAMILIES=[
   {id:'mint',label:'Mint',a:'#109e82',a2:'#3ecfa6'},{id:'indigo',label:'Indigo',a:'#3730a3',a2:'#6366f1'},
   {id:'nord',label:'Nord',a:'#5e81ac',a2:'#8fbcbc'},{id:'slate',label:'Slate',a:'#38506b',a2:'#5c9bd6'},
   {id:'dusk',label:'Dusk',a:'#403d88',a2:'#8b639b',swatch:'linear-gradient(135deg,#f8b2b2,#af719d 35%,#8b639b 70%,#403d88)'},
-  {id:'sangria',label:'Sangria',a:'#cf4173',a2:'#f39399',swatch:'linear-gradient(135deg,#f6d8bd,#f39399 35%,#cf4173 68%,#5d3140)'},{id:'claude',label:'Claude',a:'#cc785c',a2:'#d4a27f'},
+  {id:'sangria',label:'Sangria',a:'#cf4173',a2:'#f39399',swatch:'linear-gradient(135deg,#f6d8bd,#f39399 35%,#cf4173 68%,#5d3140)'},{id:'claude',label:'Claude',a:'#c96442',a2:'#d97757',swatch:'linear-gradient(135deg,#faf9f5 0%,#f0eee6 38%,#d97757 70%,#c96442 86%,#30302e)'},
   {id:'liquid',label:'Liquid',defaultMode:'dark',a:'#0071e3',a2:'#64d2ff',swatch:'linear-gradient(135deg,#f6fbff,#a9c9ff 30%,#0071e3 66%,#64d2ff)'},
   {id:'pink',label:'Pink',a:'#db2777',a2:'#f9a8d4'}
 ];
@@ -2089,11 +2231,11 @@ function saPill(v){const s=SA[v||'none']||SA.none;return s.cls?`<span class="pil
 const FONTS=[
   {id:'sfpro',label:'SF Pro',stack:'"SF Pro Display","SF Pro Text",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif'},
   {id:'aptos',label:'Aptos',stack:'Aptos,"Segoe UI",Calibri,sans-serif'},
-  {id:'styrene',label:'Styrene B',stack:'"Styrene B","StyreneB",Aptos,"Segoe UI",sans-serif'},
+  {id:'styrene',label:'Claude Sans',stack:'"Claude Sans","Styrene B","StyreneB",Aptos,"Segoe UI",sans-serif'},
   {id:'humanist',label:'Trebuchet',stack:'"Trebuchet MS","Segoe UI",Verdana,sans-serif'},
   {id:'serif',label:'Georgia',stack:'Georgia,Cambria,"Times New Roman",Times,serif'},
   {id:'elegant',label:'Palatino',stack:'"Palatino Linotype","Book Antiqua",Palatino,Georgia,serif'},
-  {id:'anthropicserif',label:'Anthropic Serif',stack:'"AnthropicSerif-Display","Anthropic Serif Display",Georgia,Cambria,serif'},
+  {id:'anthropicserif',label:'Claude Serif',stack:'"Claude Serif","AnthropicSerif-Display","Anthropic Serif Display",Georgia,Cambria,serif'},
   {id:'compact',label:'Tahoma',stack:'Tahoma,Verdana,Geneva,sans-serif'}
 ];
 /* ============ DATE RANGES ============ */
