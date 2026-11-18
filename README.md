@@ -5,7 +5,7 @@ host is written in Rust; the original HTML interface runs inside the Microsoft
 Edge WebView2 control. There is no Electron, no Node.js runtime and no console
 window.
 
-Current version: **1.0.1** (see [Releases](https://github.com/meowyourhead/inventory-tracker/releases)).
+Current version: **1.0.2** (see [Releases](https://github.com/meowyourhead/inventory-tracker/releases)).
 
 ## Quick start
 
