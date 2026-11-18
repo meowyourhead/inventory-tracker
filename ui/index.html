@@ -107,8 +107,6 @@ html[data-family=dusk][data-mode=light] body{background:linear-gradient(180deg,c
 html[data-family=dusk][data-mode=dark] body{background:linear-gradient(180deg,#3a2f5c,#2a2350 34%,#1a1738 70%,#131126);background-attachment:fixed}
 /* Dusk: the ramp shows up in the display type — deep stops by day, bright
    stops in the night sky. */
-html[data-family=dusk] #title{background:linear-gradient(90deg,#8b639b,#403d88);-webkit-background-clip:text;background-clip:text;color:transparent}
-html[data-family=dusk][data-mode=dark] #title{background:linear-gradient(90deg,#f8b2b2,#c58eb8 55%,#af719d);-webkit-background-clip:text;background-clip:text}
 html[data-family=dusk][data-mode=dark] .brandtext{color:#f2c9d9}
 html,body{height:100%}
 body{position:relative;margin:0;color:var(--ink);font:var(--fs,14px)/1.43 var(--font,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif);font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased;background:var(--bg)}
@@ -173,7 +171,6 @@ html[data-family=liquid][data-mode=dark] body::after{background:radial-gradient(
 html[data-family=liquid] aside{background:color-mix(in srgb,var(--card) 58%,transparent);backdrop-filter:blur(30px) saturate(180%);-webkit-backdrop-filter:blur(30px) saturate(180%);border-right:1px solid var(--liq-rim);box-shadow:inset -1px 0 0 color-mix(in srgb,var(--ink) 6%,transparent)}
 html[data-family=liquid] .top{background:linear-gradient(180deg,color-mix(in srgb,var(--card) 68%,transparent),color-mix(in srgb,var(--card) 42%,transparent));backdrop-filter:blur(26px) saturate(180%);-webkit-backdrop-filter:blur(26px) saturate(180%);border-bottom:1px solid var(--liq-rim);border-radius:0 0 22px 22px;box-shadow:inset 0 1px 0 var(--liq-rim),0 14px 34px -28px var(--liq-glow)}
 html[data-family=liquid] .brandtext{background:linear-gradient(90deg,var(--accent),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:800;letter-spacing:-.01em}
-html[data-family=liquid] #title{font-weight:700;letter-spacing:-.025em}
 html[data-family=liquid] nav{gap:5px}
 html[data-family=liquid] nav button{border-radius:14px;padding:10px 9px;font-weight:600;color:color-mix(in srgb,var(--muted) 84%,var(--ink))}
 html[data-family=liquid] nav button.active,html[data-family=liquid] nav button:hover{background:color-mix(in srgb,var(--accent) 15%,transparent);color:var(--accent);box-shadow:inset 0 1px 0 color-mix(in srgb,#fff 38%,transparent),0 8px 18px -14px var(--liq-glow)}
@@ -204,8 +201,8 @@ html[data-family=liquid] .scTableWrap th{background:color-mix(in srgb,var(--card
    reference's alternate rose-paper palette. */
 html[data-family=cyberpunk],html[data-family=cyberpunk] body,html[data-family=cyberpunk] button,html[data-family=cyberpunk] input,html[data-family=cyberpunk] select,html[data-family=cyberpunk] textarea{font-family:"Rajdhani","Segoe UI",system-ui,sans-serif}
 html[data-family=cyberpunk] body{font-weight:600;letter-spacing:.02em}
-html[data-family=cyberpunk] #title,html[data-family=cyberpunk] .brandtext,html[data-family=cyberpunk] .panelTitle h3,html[data-family=cyberpunk] .hd h2,html[data-family=cyberpunk] .hd h3,html[data-family=cyberpunk] th,html[data-family=cyberpunk] nav button,html[data-family=cyberpunk] .btn,html[data-family=cyberpunk] .kpi .kLabel,html[data-family=cyberpunk] .toastTitle{font-family:"Rajdhani","Segoe UI",sans-serif;text-transform:uppercase;letter-spacing:.08em}
-html[data-family=cyberpunk] .mono,html[data-family=cyberpunk] .qty,html[data-family=cyberpunk] .kpi .kVal,html[data-family=cyberpunk] .uTot,html[data-family=cyberpunk] .estVal,html[data-family=cyberpunk] .coverRow b,html[data-family=cyberpunk] .topRow b,html[data-family=cyberpunk] .clock .ctime,html[data-family=cyberpunk] .pill,html[data-family=cyberpunk] .estHead,html[data-family=cyberpunk] .miniSel,html[data-family=cyberpunk] .field label,html[data-family=cyberpunk] label,html[data-family=cyberpunk] .muted{font-family:"Share Tech Mono",ui-monospace,Consolas,monospace;font-weight:400;letter-spacing:.03em}
+html[data-family=cyberpunk] .brandtext,html[data-family=cyberpunk] .panelTitle h3,html[data-family=cyberpunk] .hd h2,html[data-family=cyberpunk] .hd h3,html[data-family=cyberpunk] th,html[data-family=cyberpunk] nav button,html[data-family=cyberpunk] .btn,html[data-family=cyberpunk] .kpi .kLabel,html[data-family=cyberpunk] .toastTitle{font-family:"Rajdhani","Segoe UI",sans-serif;text-transform:uppercase;letter-spacing:.08em}
+html[data-family=cyberpunk] .mono,html[data-family=cyberpunk] .qty,html[data-family=cyberpunk] .kpi .kVal,html[data-family=cyberpunk] .uTot,html[data-family=cyberpunk] .estVal,html[data-family=cyberpunk] .coverRow b,html[data-family=cyberpunk] .topRow b,html[data-family=cyberpunk] .pill,html[data-family=cyberpunk] .estHead,html[data-family=cyberpunk] .miniSel,html[data-family=cyberpunk] .field label,html[data-family=cyberpunk] label,html[data-family=cyberpunk] .muted{font-family:"Share Tech Mono",ui-monospace,Consolas,monospace;font-weight:400;letter-spacing:.03em}
 html[data-family=cyberpunk] aside{background:linear-gradient(180deg,color-mix(in srgb,var(--cp-well) 88%,#000),#070205);border-right:1px solid color-mix(in srgb,var(--cp-red) 55%,transparent)}
 html[data-family=cyberpunk][data-mode=light] aside{background:linear-gradient(180deg,rgba(255,250,252,.96),rgba(248,231,236,.96))}
 html[data-family=cyberpunk] .brandtext{font-family:"Rajdhani";font-weight:700;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--cp-red);padding-bottom:10px;border-bottom:1px solid color-mix(in srgb,var(--cp-red) 40%,transparent);margin-bottom:8px}
@@ -217,9 +214,6 @@ html[data-family=cyberpunk] nav button.active{background:color-mix(in srgb,var(-
 html[data-family=cyberpunk] .top{background:linear-gradient(180deg,color-mix(in srgb,var(--cp-well) 72%,transparent),transparent);border-bottom:2px solid var(--cp-red);box-shadow:0 1px 14px color-mix(in srgb,var(--cp-red) 45%,transparent)}
 html[data-family=cyberpunk][data-mode=light] .top{background:linear-gradient(180deg,rgba(255,250,252,.95),rgba(248,231,236,.72))}
 html[data-family=cyberpunk] .top::after{content:'';position:absolute;left:26px;bottom:-2px;width:64px;height:3px;background:var(--cp-cyan)}
-html[data-family=cyberpunk] #title{font-size:20px;font-weight:700;letter-spacing:.14em;color:var(--ink);border-left:3px solid var(--cp-red);padding-left:10px}
-html[data-family=cyberpunk] .clock .ctime{color:var(--cp-cyan);font-size:15px;letter-spacing:.08em}
-html[data-family=cyberpunk] .clock .cdate{font-family:"Share Tech Mono";color:var(--cp-btn-fg);font-size:9px;letter-spacing:.16em;text-transform:uppercase}
 html[data-family=cyberpunk] .iconBtn{border-radius:0;border:1px solid color-mix(in srgb,var(--cp-red) 55%,transparent);background:transparent;color:var(--cp-red)}
 html[data-family=cyberpunk] .iconBtn:hover{background:var(--cp-red);color:var(--cp-ink);border-color:var(--cp-red)}
 html[data-family=cyberpunk] .btn{--cpc:var(--cp-red);font-family:"Rajdhani";font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--cp-btn-fg);background-color:color-mix(in srgb,var(--cp-red) 10%,transparent);border:1px solid var(--cpc);border-radius:0;box-shadow:none;clip-path:polygon(0 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%)}
@@ -334,11 +328,6 @@ html[data-family=genshin] .top{background:color-mix(in srgb,var(--g-panel) 94%,t
 html[data-family=genshin][data-mode=dark] .top{background:rgba(52,61,82,.94)}
 html[data-family=genshin][data-mode=light] .top{background:rgba(247,244,235,.94)}
 html[data-family=genshin] .top::after{display:none}
-html[data-family=genshin] #title{color:var(--ink);font-weight:700;font-size:22px;letter-spacing:.01em;padding-bottom:0}
-html[data-family=genshin] #title::after{display:none}
-html[data-family=genshin][data-mode=dark] #title{color:var(--g-cream);text-shadow:0 0 18px color-mix(in srgb,var(--g-element) 25%,transparent)}
-html[data-family=genshin] .clock .ctime{color:var(--ink);font-weight:700;font-size:15px}
-html[data-family=genshin] .clock .cdate{color:var(--muted);font-size:10px}
 html[data-family=genshin] .iconBtn{border-radius:50%;width:34px;height:34px;background:var(--g-circle);color:var(--g-circle-text);border:1.5px solid color-mix(in srgb,var(--ink) 22%,transparent);box-shadow:none}
 html[data-family=genshin] .iconBtn:hover{background:var(--g-cream);color:var(--g-cream-text);border-color:var(--g-cream);box-shadow:0 0 12px rgba(255,235,180,.45)}
 html[data-family=genshin] .btn{background:var(--g-btn-bg);color:var(--g-btn-fg);border:1.5px solid color-mix(in srgb,var(--g-element-deep) 28%,transparent);border-radius:999px;font-weight:700;box-shadow:0 1px 0 color-mix(in srgb,#fff 55%,transparent) inset}
@@ -496,11 +485,6 @@ html[data-family=zzz] nav button:hover{background:color-mix(in srgb,var(--zzz-bl
 html[data-family=zzz] nav button.active{background:var(--zzz-blue);border-color:var(--zzz-border);color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.32),0 0 0 1px #000}
 html[data-family=zzz] .top{background:linear-gradient(180deg,var(--zzz-panel),var(--zzz-panel-2));border-bottom:2px solid var(--zzz-border);box-shadow:0 1px 0 color-mix(in srgb,var(--ink) 14%,transparent)}
 html[data-family=zzz] .top::after{content:'';position:absolute;left:26px;bottom:-2px;width:92px;height:3px;background:var(--zzz-blue);box-shadow:0 0 12px color-mix(in srgb,var(--zzz-blue) 75%,transparent)}
-html[data-family=zzz] #title{font-size:19px;font-weight:800;letter-spacing:.045em;text-transform:uppercase}
-html[data-family=zzz] .clock .ctime{color:var(--zzz-cyan);font-size:15px;font-weight:700;letter-spacing:.06em}
-html[data-family=zzz] .clock .cdate{color:var(--muted);font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
-html[data-family=zzz][data-mode=light] .clock .ctime{color:#06566c;text-shadow:0 1px 0 rgba(255,255,255,.75)}
-html[data-family=zzz][data-mode=light] .clock .cdate{color:#3f444b}
 html[data-family=zzz] .iconBtn{border-radius:50%;border:2px solid var(--zzz-border);background:var(--zzz-panel);color:var(--ink);box-shadow:inset 0 0 0 2px color-mix(in srgb,var(--ink) 16%,transparent)}
 html[data-family=zzz] .iconBtn:hover{background:var(--zzz-blue);border-color:var(--zzz-border);color:#fff}
 html[data-family=zzz] .btn{border:1px solid var(--zzz-border);border-radius:6px;background-color:var(--zzz-btn-bg);background-image:linear-gradient(45deg,rgba(255,255,255,.08) 25%,transparent 0 75%,rgba(255,255,255,.08) 0),linear-gradient(45deg,rgba(255,255,255,.08) 25%,transparent 0 75%,rgba(255,255,255,.08) 0);background-position:0 0,3px 3px;background-size:6px 6px;color:var(--zzz-btn-fg);font-weight:700;letter-spacing:.015em;box-shadow:inset 0 1px 2px rgba(255,255,255,.2),inset 0 0 0 2px var(--zzz-btn-border),inset 0 0 0 3px #000}
@@ -564,7 +548,6 @@ html[data-family=zzz] ::-webkit-scrollbar-thumb:hover{background:var(--zzz-blue)
    stylesheet disables these unless the Settings → Motion override is on. */
 html[data-family=cyberpunk] .app::before{content:'';position:fixed;left:0;right:0;top:-180px;height:180px;z-index:3;pointer-events:none;background:linear-gradient(180deg,transparent,rgba(0,231,255,.06) 55%,transparent);animation:cp-sweep 9s linear infinite;will-change:transform}
 html[data-family=cyberpunk] .brandtext::after{animation:cp-flicker 7s steps(1) infinite}
-html[data-family=cyberpunk] .clock .ctime{text-shadow:0 0 7px rgba(0,231,255,.35)}
 @keyframes cp-sweep{from{transform:translateY(0)}to{transform:translateY(calc(100vh + 180px))}}
 @keyframes cp-flicker{0%,94%,100%{opacity:1}95%{opacity:.4}96%{opacity:.9}97%{opacity:.55}}
 #genshinStars{display:none;position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;contain:layout paint style}
@@ -582,7 +565,7 @@ html[data-family=genshin] #genshinStars{display:block}
 @keyframes gs-spin{from{rotate:var(--rot)}to{rotate:calc(var(--rot) + 360deg)}}
 html[data-motion-paused="1"] .gsDrift,html[data-motion-paused="1"] .gsGlint,html[data-motion-paused="1"] .app::before,html[data-motion-paused="1"] .brandtext::after{animation-play-state:paused!important}
 @media(max-width:1000px){html[data-family=genshin] .app{grid-template-columns:1fr}}
-@media(max-width:760px){.top{margin:-14px -14px 14px;padding:12px 14px}html[data-family=cyberpunk] .top::after{left:14px}.winControls{margin-top:-12px;margin-bottom:-12px;margin-right:-14px}}
+@media(max-width:760px){.top{margin:-14px -14px 14px;padding:0 0 0 14px}html[data-family=cyberpunk] .top::after{left:14px}}
 
 .app{position:relative;z-index:1}
 body,.card,.btn,nav button,input,select{transition:background-color .2s,border-color .2s,color .2s,box-shadow .2s}
@@ -603,11 +586,18 @@ nav button.active,nav button:hover{background:var(--soft);color:var(--accent);fo
 .backToTopBtn span{line-height:1}
 @media(max-width:760px){.backToTopBtn{right:16px;bottom:16px;width:54px;height:54px}}
 main{padding:22px 26px 60px;min-width:0}
-.top{position:relative;display:flex;align-items:center;gap:10px;margin:-18px -21px 18px;padding:14px 21px 12px;min-height:44px}
+/* Title bar: one compact 42px strip. Controls are 30px so they sit on a
+   6px margin; window buttons fill the full height like native captions. */
+.top{position:relative;display:flex;align-items:center;gap:7px;margin:-18px -21px 16px;padding:0 0 0 21px;height:42px;min-height:42px;box-sizing:border-box}
 [data-drag]{-webkit-user-select:none;user-select:none}
-.winControls{display:flex;align-items:stretch;gap:0;align-self:stretch;height:auto;margin:-14px -21px -12px 6px;padding:0;border-left:1px solid var(--line)}
-.winBtn{display:grid;place-items:center;width:54px;min-width:54px;height:100%;padding:0;color:var(--muted);background:transparent;border:0;border-radius:0;cursor:pointer;transition:background .12s,color .12s}
-.winBtn svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.4}
+.winControls{display:flex;align-items:stretch;gap:0;align-self:stretch;height:auto;margin:0 0 0 4px;padding:0;border-left:1px solid var(--line)}
+.winBtn{display:grid;place-items:center;width:44px;min-width:44px;height:100%;padding:0;color:var(--muted);background:transparent;border:0;border-radius:0;cursor:pointer;transition:background .12s,color .12s}
+.winBtn svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:1.4}
+#main .top .iconBtn{width:30px;height:30px;min-width:30px}
+#main .top .iconBtn svg{width:15px;height:15px}
+#main .top .badge{top:-4px;right:-4px;min-width:15px;height:15px;padding:0 3px;font-size:9.5px}
+#main .top .notifPanel{top:calc(100% + 8px)}
+#main .top :is(#edit,#stop){height:30px;min-width:0;padding:0 13px;font-size:12.5px;line-height:1;justify-content:center;gap:6px}
 .winBtn:hover{color:var(--ink);background:color-mix(in srgb,var(--ink) 8%,transparent)}
 .winBtn.close:hover{color:#fff;background:#d13438}
 .wres{position:fixed;z-index:390}
@@ -620,13 +610,7 @@ main{padding:22px 26px 60px;min-width:0}
 .wres-se{bottom:0;right:0;width:10px;height:10px;cursor:se-resize}
 .wres-sw{bottom:0;left:0;width:10px;height:10px;cursor:sw-resize}
 body.isMax .wres{display:none}
-#title{font-size:22px;margin:0;letter-spacing:-.01em;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:48%}
-.editState{font-weight:850}.editState.on{color:var(--accent)}.editState.off{color:var(--a2)}
-.editNote{color:var(--muted);font-weight:600;font-size:13px}
 .grow{flex:1}.muted{color:var(--muted)}
-.clock{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;line-height:1.14;font-variant-numeric:tabular-nums;user-select:none;pointer-events:none;z-index:2}
-.clock .ctime{font-size:19px;font-weight:800;letter-spacing:.01em}
-.clock .cdate{font-size:13px;color:var(--muted);font-weight:650}
 .btn{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:8px 13px;border-radius:var(--radius-sm);font:inherit;font-weight:650;font-size:13px;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform .08s ease,filter .12s ease,background .12s ease,border-color .12s ease}
 .btn svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
 .btn:hover{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
@@ -638,11 +622,6 @@ body.isMax .wres{display:none}
 .btn.small{padding:5px 10px;font-size:12px;border-radius:8px}
 .hd .btn[aria-label="Close"]{justify-content:center}
 .btn:disabled{opacity:.5;cursor:not-allowed}
-#edit{height:38px;min-width:186px;justify-content:center}
-#stop{position:relative;height:38px;min-width:186px;padding:0 14px;justify-content:center;overflow:hidden}
-#stop .lbl{position:absolute;left:0;right:0;text-align:center;transition:opacity .15s}
-#stop .stopHover{opacity:0}
-#stop:hover .stopTimer{opacity:0}#stop:hover .stopHover{opacity:1}
 .iconBtn{position:relative;display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid var(--line);background:var(--card);border-radius:var(--radius-sm);cursor:pointer;color:var(--ink);box-shadow:var(--shadow-sm)}
 .iconBtn:hover{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
 .iconBtn svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
@@ -719,6 +698,16 @@ html[data-family=genshin] .chartComboBtn{border-radius:999px}
 .segToggle button{border:0;background:transparent;color:var(--muted);font:inherit;font-weight:650;font-size:12.5px;padding:6px 12px;border-radius:7px;cursor:pointer}
 .segToggle button.active{background:var(--card);color:var(--accent);box-shadow:var(--shadow-sm)}
 .colWrap{position:relative}
+.sortBtn svg{width:14px;height:14px}
+.sortBtn .sortCaret{width:12px;height:12px;margin-left:-2px;opacity:.6}
+.sortMenu{min-width:196px;padding:5px;overflow-y:auto}
+.sortMenu.alignLeft{left:0;right:auto}
+.sortOpt{display:flex;align-items:center;gap:8px;width:100%;padding:7px 10px 7px 8px;border:0;border-radius:7px;background:transparent;color:var(--ink);font:inherit;font-size:12.5px;font-weight:550;text-align:left;cursor:pointer}
+.sortOpt svg{width:14px;height:14px;flex:none;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;visibility:hidden}
+.sortOpt:hover,.sortOpt:focus-visible{background:color-mix(in srgb,var(--accent) 10%,transparent);outline:none}
+.sortOpt[aria-checked=true]{color:var(--accent);font-weight:700}
+.sortOpt[aria-checked=true] svg{visibility:visible}
+.sortSep{height:1px;margin:4px 8px;background:var(--line)}
 .colPick{position:absolute;right:0;top:40px;z-index:15;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow-md);padding:10px 12px;min-width:200px;display:none}
 .colPick.left{left:0;right:auto}
 .colPick.open{display:block}
@@ -920,7 +909,6 @@ input.opt,select.opt{background:color-mix(in srgb,var(--ink) 6%,var(--card));bor
 .toolInline{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .toolInline select{width:auto;min-width:180px}
 .hintText{font-size:12px;color:var(--muted);margin:9px 0 0;line-height:1.55}
-.userName{color:var(--accent);font-weight:850}
 .emptyState{padding:34px 16px;text-align:center;color:var(--muted);font-size:13px}
 .emptyState .big{font-size:32px;margin-bottom:6px;opacity:.7}
 .shake{animation:shake .38s ease}@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}50%{transform:translateX(5px)}75%{transform:translateX(-3px)}}
@@ -1151,6 +1139,28 @@ body.scanActive .scanWorkspace{height:100%;min-height:0}
 .scanResultPlaceholder{color:var(--muted);font-style:italic;display:none!important}
 .scanActions{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:7px;align-items:end}
 .scanActions .field{margin:0}
+.scanActions .btn svg{width:14px;height:14px;stroke-width:2.1}
+/* "By" gets its own row so Log in / Log out are two equal, wide targets. */
+#singlePanel .scanActions{grid-template-columns:1fr 1fr}
+#singlePanel .scanActions .field{grid-column:1/-1}
+/* Open-lot chips under Lot/Expiry */
+.lotChips{display:flex;flex-wrap:wrap;align-items:center;gap:5px;margin:-3px 0 10px}
+.lotChipsLbl{font-size:10.5px;font-weight:700;color:var(--muted);margin-right:2px}
+.lotChip{display:inline-flex;align-items:baseline;gap:6px;padding:4px 8px;border:1px solid var(--line);border-radius:7px;background:var(--card);color:var(--ink);font:inherit;font-size:11px;cursor:pointer;max-width:100%}
+.lotChip b{font-size:11px;font-weight:700}
+.lotChip span{color:var(--muted)}
+.lotChip:hover{border-color:color-mix(in srgb,var(--accent) 55%,var(--line))}
+.lotChip.on{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 10%,var(--card))}
+.lotChip.on b{color:var(--accent)}
+.lotChipsMore{font-size:10.5px;color:var(--muted)}
+/* Quantity stepper */
+.qtyStepper{display:flex;align-items:stretch}
+.qtyStepper input{flex:1;min-width:34px;padding-left:2px!important;padding-right:2px!important;text-align:center;border-radius:0!important;-moz-appearance:textfield;appearance:textfield}
+.qtyStepper input::-webkit-inner-spin-button,.qtyStepper input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+.qtyStep{flex:none;width:26px;padding:0;border:1px solid var(--line);background:color-mix(in srgb,var(--ink) 4%,var(--card));color:var(--ink);font:inherit;font-size:15px;font-weight:700;cursor:pointer}
+.qtyStep:first-child{border-right:0;border-radius:var(--radius-sm) 0 0 var(--radius-sm)}
+.qtyStep:last-child{border-left:0;border-radius:0 var(--radius-sm) var(--radius-sm) 0}
+.qtyStep:hover{color:var(--accent);background:color-mix(in srgb,var(--accent) 9%,var(--card))}
 .scanActions .btn{height:38px;min-width:76px;justify-content:center;background:var(--accent);border-color:var(--accent);color:#fff}
 .scanActions .btn:disabled{background:color-mix(in srgb,var(--ink) 12%,var(--card));border-color:var(--line);color:var(--muted);opacity:1;box-shadow:none;cursor:not-allowed;filter:none}
 .modalScanActions{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:7px;align-items:end}
@@ -1386,30 +1396,53 @@ body.scanActive .scanWorkspace{height:100%;min-height:0}
 #stockcount .pager{flex:0 0 auto}
 @media(max-width:1000px){#stockcount{height:auto;overflow:visible}}
 
-/* Reference stock-count layout: scrollable count table plus past-count history. */
-.scCountCard{flex:3 1 0;min-height:0;display:flex;flex-direction:column;overflow:hidden;padding:12px}
-.scHistCard{flex:2 1 0;min-height:0;display:flex;flex-direction:column;margin-top:12px;padding:12px}
-.scHistHead{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:8px;flex:none}
-.scHistHead h3{font-size:14px;font-weight:800}
+/* Stock count layout: the count table takes the height; past counts fold
+   away into a single row until opened. Rows are roomier than other tables
+   because this screen is used standing at a shelf. */
+.scCountCard{flex:1 1 0;min-height:0;display:flex;flex-direction:column;overflow:hidden;padding:12px}
+#stockcount .scTopBar{margin-bottom:10px;flex-wrap:nowrap}
+.scFilterBar{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;flex:none}
+.scFilterBar .scSearch{width:260px;flex:none}
+.scFilterBar .scSearch input{height:32px}
+.scFilterBar .scFilter{height:32px}
+.scShow button{padding:5px 11px;font-size:12px}
+.scProgress #scProgText{white-space:nowrap}
+.scDiffCount{color:var(--bad)}
+#stockcount .scTableWrap th,#stockcount .scTableWrap td{height:31px;padding:3px 8px;font-size:12.5px}
+#stockcount .scTableWrap th{font-size:10.5px}
+#stockcount .scTableWrap th:nth-child(1),#stockcount .scTableWrap td:nth-child(1){width:30%;text-align:left}
+#stockcount .scTableWrap th:nth-child(2),#stockcount .scTableWrap td:nth-child(2){width:15%}
+#stockcount .scTableWrap th:nth-child(3),#stockcount .scTableWrap td:nth-child(3){width:15%}
+#stockcount .scTableWrap th:nth-child(4),#stockcount .scTableWrap td:nth-child(4){width:10%}
+#stockcount .scTableWrap th:nth-child(5),#stockcount .scTableWrap td:nth-child(5){width:18%}
+#stockcount .scTableWrap th:nth-child(6),#stockcount .scTableWrap td:nth-child(6){width:12%}
+#stockcount .scSys{color:var(--muted)}
+.scCountCell{display:inline-flex;align-items:center;gap:5px}
+#stockcount .scCountInput{width:70px;height:25px;font-size:12.5px}
+.scMatch{display:inline-grid;place-items:center;width:25px;height:25px;padding:0;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--muted);cursor:pointer;transition:background .12s,border-color .12s,color .12s}
+.scMatch svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.scMatch:hover{border-color:var(--good);color:var(--good)}
+.scMatch.on{background:var(--good);border-color:var(--good);color:#fff}
+.scNone{color:var(--muted)}
+#stockcount .scTableWrap tr{transition:background-color .6s}
+#stockcount .scTableWrap tr.scFlash{background:color-mix(in srgb,var(--accent) 16%,transparent);transition:none}
+.scHistCard{flex:0 0 auto;min-height:0;display:flex;flex-direction:column;margin-top:12px;padding:10px 12px}
+.scHistCard[open]{flex:0 1 38%}
+.scHistHead{display:flex;align-items:center;gap:8px;flex:none;cursor:pointer;list-style:none;user-select:none}
+.scHistHead::-webkit-details-marker{display:none}
+.scHistHead h3{margin:0;font-size:13.5px;font-weight:750}
+.scHistCaret{width:14px;height:14px;stroke:var(--muted);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:transform .15s}
+.scHistCard[open] .scHistCaret{transform:rotate(90deg)}
+.scHistCard[open] .scHistHead{margin-bottom:8px}
 .scHistWrap{flex:1 1 auto;min-height:0;overflow-y:auto}
 .scHistWrap th,.scHistWrap td{padding:2px 6px;height:24px;font-size:11.5px;line-height:1.15;text-align:left;vertical-align:middle;white-space:nowrap;border-bottom:1px solid var(--line)}
 .scHistWrap thead th{position:sticky;top:0;z-index:2;background:var(--card);border-bottom:1px solid var(--line);font-size:10px}
-.scCheckBox{width:15px;height:15px;accent-color:var(--accent);cursor:pointer;margin:0}
-.scVariance{display:inline-flex;min-width:34px;justify-content:center}
-.scTableWrap th:nth-child(1),.scTableWrap td:nth-child(1){width:24%;text-align:left}
-.scTableWrap th:nth-child(2),.scTableWrap td:nth-child(2){width:15%}
-.scTableWrap th:nth-child(3),.scTableWrap td:nth-child(3){width:15%}
-.scTableWrap th:nth-child(4),.scTableWrap td:nth-child(4){width:11%}
-.scTableWrap th:nth-child(5),.scTableWrap td:nth-child(5){width:9%}
-.scTableWrap th:nth-child(6),.scTableWrap td:nth-child(6){width:14%}
-.scTableWrap th:nth-child(7),.scTableWrap td:nth-child(7){width:12%}
+.scVariance{display:inline-flex;min-width:40px;justify-content:center}
+@media (prefers-reduced-motion:reduce){.scHistCaret,#stockcount .scTableWrap tr{transition:none}}
 
 /* ---- Display scale stepper (Settings) ---- */
 .scaleRow{display:flex;align-items:center;gap:10px;margin-top:10px}
-.scaleStepBtn{width:38px;height:38px;padding:0;justify-content:center;font-size:18px;font-weight:800;border-radius:var(--radius-sm)}
-.scaleReadout{min-width:56px;text-align:center;font-size:15px;font-weight:800;font-variant-numeric:tabular-nums}
-.scaleResetBtn{margin-left:auto}
-.scaleResetBtn:disabled{opacity:.45;cursor:default}
+.scaleToggle button{min-width:54px;font-variant-numeric:tabular-nums}
 
 @media print{
   aside,.top,.lockBanner,.viewBar,.itemQuickLogout,.logoutBtn,#batchDeleteBtn,.dashSelCol,#toast,.modalbg,.backToTopBtn{display:none!important}
@@ -1421,12 +1454,14 @@ body.scanActive .scanWorkspace{height:100%;min-height:0}
   .dashPanels{grid-template-columns:1fr 1fr!important}
   body.print-sc #dashboard{display:none!important}
   body.print-sc #stockcount{display:flex!important;flex-direction:column;height:auto!important;overflow:visible!important}
-  body.print-sc .scTopBar,body.print-sc .scanRow,body.print-sc .pager,body.print-sc .scHistCard{display:none!important}
+  body.print-sc .scTopBar,body.print-sc .scFilterBar,body.print-sc .scanRow,body.print-sc .pager,body.print-sc .scHistCard{display:none!important}
   body.print-sc .scCountCard{height:auto!important;min-height:0!important;overflow:visible!important;padding:0!important;border:0!important;background:#fff!important;box-shadow:none!important}
   body.print-sc .scTableWrap{flex:none;height:auto!important;overflow:visible!important}
   body.print-sc .scPrintHead{display:flex}
   body.print-sc .scTableWrap th,body.print-sc .scTableWrap td{color:#000!important;border-bottom:1px solid #bbb!important;background:#fff!important}
   body.print-sc .scCountInput{border-color:#999!important;color:#000!important;background:#fff!important}
+  body.print-sc .scCountInput::placeholder{color:transparent!important}
+  body.print-sc .scMatch{display:none!important}
   /* Dashboard print: force the reagent table and leave nothing else on the page. */
   body.print-dash{background:#fff!important;color:#000!important;overflow:visible!important}
   body.print-dash .app{display:block!important}
@@ -1444,7 +1479,7 @@ body.scanActive .scanWorkspace{height:100%;min-height:0}
   body.print-dash #items tr{break-inside:avoid}
   body.print-dash #items .pill,body.print-dash #items .categoryPill{background:#fff!important;color:#000!important;border:1px solid #777!important;box-shadow:none!important;padding:1px 4px!important;text-shadow:none!important}
 }
-@media(max-width:1000px){.dashPanels{grid-template-columns:1fr}.app{grid-template-columns:1fr}aside{border-right:0;border-bottom:1px solid var(--line)}nav{flex-direction:row;overflow-x:auto}.sideTokens,.sideTokens #chartsPick{flex-direction:row;flex-wrap:wrap}.sideTokens{padding:4px 7px}.modalbody{grid-template-columns:1fr}.paneWrap{min-height:0}#title{max-width:60%}}
+@media(max-width:1000px){.dashPanels{grid-template-columns:1fr}.app{grid-template-columns:1fr}aside{border-right:0;border-bottom:1px solid var(--line)}nav{flex-direction:row;overflow-x:auto}.sideTokens,.sideTokens #chartsPick{flex-direction:row;flex-wrap:wrap}.sideTokens{padding:4px 7px}.modalbody{grid-template-columns:1fr}.paneWrap{min-height:0}}
 
 /* 110% visual scale, compact spacing */
 @media (prefers-reduced-transparency:reduce){html[data-family=glass] aside,html[data-family=glass] .card,html[data-family=glass] .modal,html[data-family=glass] .iconBtn,html[data-family=glass] .notifPanel,html[data-family=glass] .colPick,html[data-family=glass] .comboDropdown,html[data-family=glass] .expiryPopover,html[data-family=glass] .toast,html[data-family=glass] .scTableWrap th{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:var(--card)!important}
@@ -1587,6 +1622,25 @@ body:has(#dashboard.active) .top,body:has(#charts.active) .top{flex:0 0 auto}
 .updActions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:8px}
 .updActions .switch{margin-left:auto}
 #updInstallBtn[hidden]{display:none}
+/* Idle reminder: the countdown is the whole message. A hairline along the
+   top drains over the grace period and turns to the warning colour for the
+   last minute. */
+#idleModal{z-index:55}
+#idleModal .idleBox{width:min(360px,92vw);overflow:hidden}
+.idleTrack{height:3px;background:color-mix(in srgb,var(--ink) 10%,transparent)}
+#idleFill{height:100%;background:var(--accent);transform-origin:left center;transition:transform 1s linear,background-color .3s}
+.idleTime{font-size:44px;line-height:1;font-weight:600;letter-spacing:-.03em;font-variant-numeric:tabular-nums;color:var(--ink);margin:4px 0 14px;transition:color .3s}
+#idleModal h2{margin:0 0 4px}
+#idleModal p{margin:0}
+#idleModal.urgent #idleFill{background:var(--bad)}
+#idleModal.urgent .idleTime{color:var(--bad)}
+@media (prefers-reduced-motion:reduce){#idleFill,.idleTime{transition:none}}
+.idleSet{display:grid;gap:8px}
+.idleRow{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:12.5px;color:var(--ink);cursor:default}
+.idleInput{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
+.idleCard .idleInput input{width:58px;height:30px;min-height:0;padding:4px 10px;text-align:right;font-variant-numeric:tabular-nums;-moz-appearance:textfield;appearance:textfield}
+.idleCard .idleInput input::-webkit-inner-spin-button,.idleCard .idleInput input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+.idleSummary{margin-top:10px;font-size:12px;color:var(--muted)}
 #updModal{z-index:60}
 #updModal .modal{width:min(440px,92vw)}
 #updModal .panel{box-sizing:border-box;width:100%}
@@ -1647,16 +1701,6 @@ html[data-family=claude] nav button[data-v=stockcount]{--ic:url("data:image/svg+
 html[data-family=claude] nav button[data-v=activity]{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3.6 12a8.4 8.4 0 1 0 2.5-6'/%3E%3Cpath d='M3.5 4v4h4M12 8v4.3l2.8 1.8'/%3E%3C/svg%3E")}
 html[data-family=claude] nav button[data-v=charts]{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.7' stroke-linecap='round'%3E%3Cpath d='M4 20h16M7 16.5V11M12 16.5V5.5M17 16.5v-8'/%3E%3C/svg%3E")}
 html[data-family=claude] nav button[data-v=settings]{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.7' stroke-linecap='round'%3E%3Cpath d='M4 7h9M18 7h2M4 17h3M12 17h8'/%3E%3Ccircle cx='15.5' cy='7' r='2.4'/%3E%3Ccircle cx='9.5' cy='17' r='2.4'/%3E%3C/svg%3E")}
-/* Header: the claude.ai greeting — light serif led by the clay spark. */
-html[data-family=claude] #title{font-family:var(--serif);font-size:27px;font-weight:330;letter-spacing:-.022em;line-height:1.2;color:var(--ink)}
-html[data-family=claude] #title::before{content:'';display:inline-block;vertical-align:-.12em;margin-right:12px;width:24px;height:24px;background:var(--a2);-webkit-mask:var(--cl-spark) center/contain no-repeat;mask:var(--cl-spark) center/contain no-repeat}
-html[data-family=claude] .userName{color:inherit;font-weight:inherit}
-html[data-family=claude] .editState{font-weight:inherit;margin-left:.25em}
-html[data-family=claude] .editState.on{color:var(--accent)}
-html[data-family=claude] .editState.off{color:var(--muted)}
-html[data-family=claude] .editNote{font-family:var(--font);font-weight:400;font-size:13px;letter-spacing:0;margin-left:.3em}
-html[data-family=claude] .clock .ctime{font-size:17px;font-weight:500;letter-spacing:0}
-html[data-family=claude] .clock .cdate{font-size:12px;font-weight:400}
 /* Controls: hairline buttons, ghost icon buttons, clay only for primary. */
 html[data-family=claude] .btn{border:.5px solid var(--line-strong);background:var(--card);color:var(--ink);border-radius:8px;font-weight:500;box-shadow:none;transition:background-color .12s,border-color .12s,color .12s}
 html[data-family=claude] .btn:hover{background:color-mix(in srgb,var(--ink) 4%,var(--card));border-color:var(--line-strong)}
@@ -1772,7 +1816,7 @@ html[data-family=claude] :is(.dashCardsPane #items,#allModal>.modal>.panel,#stat
     <div class="brandtext" id="brandName" data-drag>Inventory</div>
     <nav>
       <button class="active" data-v="dashboard">Dashboard</button>
-      <button data-v="scanops">Scan</button>
+      <button data-v="scanops">Scan/Catalog</button>
       <button id="navCount" data-v="stockcount">Count</button>
       <button data-v="activity">History</button>
       <button data-v="charts">Charts</button>
@@ -1781,16 +1825,14 @@ html[data-family=claude] :is(.dashCardsPane #items,#allModal>.modal>.panel,#stat
   </aside>
   <main id="main">
     <div class="top" data-drag>
-      <h1 id="title"></h1>
       <div class="grow"></div>
-      <div id="clock" class="clock"><span class="ctime">--:--</span><span class="cdate"></span></div>
       <button id="modeToggle" class="iconBtn" title="Toggle light / dark (keeps theme accent)"><svg class="ic-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
       <div class="notifWrap">
         <button id="bell" class="iconBtn" title="Notifications"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg><span id="bellBadge" class="badge hide">0</span></button>
         <div id="notifPanel" class="notifPanel"></div>
       </div>
       <button id="edit" class="btn hide">Edit</button>
-      <button id="stop" class="btn danger hide"><span class="lbl stopTimer">Timeout in: <span id="stopCountdown">10:00</span></span><span class="lbl stopHover">Stop editing</span></button>
+      <button id="stop" class="btn danger hide" title="Stop editing so another computer can edit">Stop editing</button>
       <div class="winControls">
         <button type="button" class="winBtn" id="winMin" title="Minimize" aria-label="Minimize"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M3 8.5h10"/></svg></button>
         <button type="button" class="winBtn" id="winMax" title="Maximize or restore" aria-label="Maximize or restore"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3.2" y="3.2" width="9.6" height="9.6" rx="1"/></svg></button>
@@ -1808,6 +1850,7 @@ html[data-family=claude] :is(.dashCardsPane #items,#allModal>.modal>.panel,#stat
         <button id="printBtn" class="btn small" title="Print current dashboard view"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round"><path d="M6 9V3h12v6"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="7"/></svg>Print</button>
         <button id="expandAll" class="iconBtn" title="Open all items in a large window" style="width:32px;height:32px"><svg viewBox="0 0 24 24" style="width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"/></svg></button>
         <div class="colWrap"><button id="colBtn" class="btn small hide">Columns ▾</button><div id="colPick" class="colPick"></div></div>
+        <div class="colWrap sortWrap"><button id="sortBtn" type="button" class="btn small sortBtn hide" aria-haspopup="menu" aria-expanded="false" title="Arrange cards"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16"/><path d="m3 16 4 4 4-4"/><path d="M14 6h7M14 12h5M14 18h3"/></svg><span id="sortLabel">Name A–Z</span><svg class="sortCaret" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></button><div id="sortMenu" class="colPick sortMenu" role="menu" aria-label="Arrange cards by"></div></div>
       </div>
       <div class="dashSearchRow">
         <div class="searchWrap dashSearchWrap"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input id="dashSearch" placeholder="Search items…" aria-label="Search items"></div>
@@ -1858,9 +1901,10 @@ html[data-family=claude] :is(.dashCardsPane #items,#allModal>.modal>.panel,#stat
               <div class="scanValidation"><span id="checkItem" class="scanCheck">Matched item</span><span id="checkLot" class="scanCheck">Lot</span><span id="checkExp" class="scanCheck">Expiry</span></div>
               <div class="field"><label>Catalog</label><div class="catalogInputWrap comboWrap"><input id="bulkRef" autocomplete="off" required placeholder="Search or select catalog"><button id="clearBulkRef" type="button" class="inlineClearBtn catalogClearBtn" aria-label="Clear Catalog">×</button><button id="bulkRefToggle" type="button" class="comboToggle" tabindex="-1" aria-label="Show catalog options"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button></div></div>
               <div class="grid g2"><div class="field"><label>Lot</label><input id="bulkLot" required></div><div class="field"><label>Expiry</label><input id="bulkExp" type="date" required></div></div>
-              <div class="grid g2"><div class="field"><label>Quantity</label><input id="bulkQty" type="number" min="1" value="1" required></div><div class="field"><label id="bulkDateLabel">Date</label><input id="bulkDate" type="date" required></div></div>
+              <div id="bulkLots" class="lotChips" hidden></div>
+              <div class="grid g2"><div class="field"><label>Quantity</label><div class="qtyStepper"><button type="button" class="qtyStep" data-step="-1" aria-label="Decrease quantity">−</button><input id="bulkQty" type="number" min="1" value="1" required><button type="button" class="qtyStep" data-step="1" aria-label="Increase quantity">+</button></div></div><div class="field"><label id="bulkDateLabel">Date</label><input id="bulkDate" type="date" required></div></div>
               <div class="field"><label>Remarks (optional)</label><input id="bulkRemarks" class="opt"></div>
-              <div class="scanActions"><div class="field"><label>By (optional)</label><input id="bulkBy" class="opt"></div><button id="bulkLogin" type="button" class="btn primary write">Log in</button><button id="bulkLogout" type="button" class="btn primary write">Log out</button></div>
+              <div class="scanActions"><div class="field"><label>By (optional)</label><input id="bulkBy" class="opt"></div><button id="bulkLogin" type="button" class="btn primary write" title="Add this stock"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>Log in</button><button id="bulkLogout" type="button" class="btn primary write" title="Take this stock out"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V4"/><path d="m7 9 5-5 5 5"/><path d="M5 20h14"/></svg>Log out</button></div>
             </form>
             <button id="clearBulkScan" type="button" class="btn resetAllBtn" title="Reset form"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>Reset form</button>
             </div>
@@ -1892,25 +1936,28 @@ html[data-family=claude] :is(.dashCardsPane #items,#allModal>.modal>.panel,#stat
     </section>
     <section id="stockcount" class="view">
       <div class="scTopBar">
-        <div id="scProgress" class="scProgress"><span id="scProgText">No count in progress</span><div class="scProgBar"><i id="scProgFill"></i></div></div>
-        <select id="scCategoryFilter" class="miniSel scFilter" title="Filter the count table by category"><option value="">All categories</option></select>
+        <div id="scProgress" class="scProgress"><span id="scProgText"></span><div class="scProgBar"><i id="scProgFill"></i></div></div>
         <div class="grow"></div>
-        <button id="scNewCount" type="button" class="btn small">New count</button>
-        <button id="scPrint" type="button" class="btn small scQuiet" title="Print count sheet (all items in current filter)"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round"><path d="M6 9V3h12v6"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="7"/></svg>Print</button>
+        <button id="scPrint" type="button" class="btn small scQuiet" title="Print a count sheet for the selected category"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round"><path d="M6 9V3h12v6"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="7"/></svg>Print sheet</button>
         <span class="scDiv"></span>
         <button id="scUndo" type="button" class="btn small scQuiet" disabled>Undo</button>
-        <button id="scDiscard" type="button" class="btn small scDanger" disabled>Discard</button>
-        <button id="scApply" type="button" class="btn primary write" disabled>Apply adjustments</button>
+        <button id="scDiscard" type="button" class="btn small scDanger" disabled>Discard count</button>
+        <button id="scApply" type="button" class="btn primary write" disabled>Review &amp; apply</button>
+      </div>
+      <div class="scFilterBar">
+        <div class="searchWrap scSearch"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input id="scSearch" placeholder="Find or scan an item…" aria-label="Find or scan an item" autocomplete="off"></div>
+        <select id="scCategoryFilter" class="miniSel scFilter" title="Count one category at a time"><option value="">All categories</option></select>
+        <div id="scShow" class="segToggle scShow" role="group" aria-label="Show rows"><button type="button" data-show="all" class="active">All</button><button type="button" data-show="todo">Not counted</button><button type="button" data-show="diff">Differences</button></div>
       </div>
       <div class="card scCountCard">
         <div class="scTableWrap">
-          <table><thead><tr><th>Item</th><th>Category</th><th>Catalog no.</th><th>System</th><th title="Tick if you physically tallied this item">Counted?</th><th>Counted</th><th>Variance</th></tr></thead><tbody id="scBody"></tbody></table>
+          <table><thead><tr><th>Item</th><th>Category</th><th>Catalog no.</th><th title="Quantity the system expects on the shelf">System</th><th title="Type what is on the shelf, or press ✓ when it matches the system">Counted</th><th title="Counted minus system">Difference</th></tr></thead><tbody id="scBody"></tbody></table>
         </div>
       </div>
-      <div class="card scHistCard">
-        <div class="scHistHead"><h3>Past stock counts</h3><span id="scHistMeta" class="muted"></span></div>
+      <details id="scHistCard" class="card scHistCard">
+        <summary class="scHistHead"><svg class="scHistCaret" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg><h3>Past stock counts</h3><span id="scHistMeta" class="muted"></span></summary>
         <div class="scHistWrap"><table><thead><tr><th>Date &amp; time</th><th>User</th><th>Category</th><th>Items counted</th><th>Adjustments applied</th><th>Stock added</th><th>Stock removed</th></tr></thead><tbody id="scHistBody"></tbody></table></div>
-      </div>
+      </details>
       <div class="scPrintHead"><b id="scPrintTitle"></b><span id="scPrintMeta"></span></div>
     </section>
     <section id="settings" class="view">
@@ -1930,7 +1977,7 @@ html[data-family=claude] :is(.dashCardsPane #items,#allModal>.modal>.panel,#stat
           <div class="card settingsCard workspaceCard">
             <div class="workspaceGrid">
               <div class="workspaceBlock"><h3>Inventory name</h3><div class="row nameSaveRow"><input id="appName" maxlength="60" placeholder="Inventory" style="flex:1"><button id="saveAppName" class="btn primary write">Save</button></div></div>
-              <div class="workspaceBlock"><h3 class="helpTitle">Display scale <button type="button" class="helpDot" data-help="Adjusts the size of text and controls. The window resizes to match, so everything keeps fitting without clipping or scrolling.">?</button></h3><div class="scaleRow"><button id="scaleDown" type="button" class="btn scaleStepBtn" title="Decrease scale">−</button><div class="scaleReadout" id="scaleValue">100%</div><button id="scaleUp" type="button" class="btn scaleStepBtn" title="Increase scale">+</button><button id="scaleReset" type="button" class="btn small scaleResetBtn">Reset</button></div></div>
+              <div class="workspaceBlock"><h3 class="helpTitle">Display scale <button type="button" class="helpDot" data-help="Adjusts the size of text and controls. The window resizes to match, so everything keeps fitting without clipping or scrolling.">?</button></h3><div class="scaleRow"><div id="scaleMode" class="segToggle scaleToggle" role="group" aria-label="Display scale"><button type="button" data-scale="0.9">90%</button><button type="button" data-scale="1">100%</button><button type="button" data-scale="1.2">120%</button><button type="button" data-scale="1.4">140%</button></div></div></div>
             </div>
           </div>
         </div>
@@ -1946,6 +1993,15 @@ html[data-family=claude] :is(.dashCardsPane #items,#allModal>.modal>.panel,#stat
           <div class="card settingsCard scopeCard">
             <h3 class="helpTitle">Global data scope <button type="button" class="helpDot" data-help="Filters app history and usage. In-stock items always remain visible." aria-expanded="false">?</button></h3>
             <div class="scopeBody"><div id="scopeChooser" class="scopeChooser"><button data-scope="all">All time</button><button data-scope="6m">Past 6 months</button><button data-scope="1y">Past year</button><button data-scope="custom">Custom range</button></div><div id="scopeDates" class="scopeDates"><div><label>From</label><input id="scopeFrom" type="date"></div><div><label>To</label><input id="scopeTo" type="date"></div></div></div>
+          </div>
+
+          <div class="card settingsCard idleCard">
+            <h3 class="helpTitle">Editing timeout <button type="button" class="helpDot" data-help="When this computer has no mouse or keyboard activity, a reminder appears after the first period. Editing stops after the second period unless someone chooses Keep editing. Applies to every computer." aria-expanded="false">?</button></h3>
+            <div class="idleSet">
+              <label class="idleRow" for="idleWarnMin"><span>Show a reminder after</span><span class="idleInput"><input id="idleWarnMin" class="write" type="number" min="1" max="240" step="1" inputmode="numeric">min</span></label>
+              <label class="idleRow" for="idleGraceMin"><span>Then stop editing after</span><span class="idleInput"><input id="idleGraceMin" class="write" type="number" min="1" max="240" step="1" inputmode="numeric">min</span></label>
+            </div>
+            <div id="idleSummary" class="idleSummary"></div>
           </div>
 
           <div class="card settingsCard updateCard">
@@ -2113,6 +2169,17 @@ html[data-family=claude] :is(.dashCardsPane #items,#allModal>.modal>.panel,#stat
     </div>
   </div>
 </div>
+<div id="idleModal" class="modalbg" role="alertdialog" aria-modal="true" aria-labelledby="idleTitle" aria-describedby="idleMsg">
+  <div class="modal smodal idleBox">
+    <div class="idleTrack" aria-hidden="true"><div id="idleFill"></div></div>
+    <div class="panel">
+      <div id="idleTime" class="idleTime" role="timer">15:00</div>
+      <h2 id="idleTitle">Still editing?</h2>
+      <p id="idleMsg"></p>
+      <div class="acts"><button class="btn" id="idleStop">Stop editing</button><button class="btn primary" id="idleKeep">Keep editing</button></div>
+    </div>
+  </div>
+</div>
 <div id="expiryPopover" class="expiryPopover" role="dialog"><div class="expiryPopHd"><b id="expiryPopTitle">Expiry details</b><button id="expiryPopClose" type="button">×</button></div><div id="expiryPopBody"></div></div>
 <div id="helpPopover" class="helpPopover" role="dialog"></div>
 <div id="bulkRefDropdown" class="comboDropdown" role="listbox"></div>
@@ -2203,9 +2270,9 @@ function fmtNum(n){n=+n||0;return n.toLocaleString('en-US')}
 const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const ACT_LABELS={in:'Log in',out:'Log out',cat_add:'Added',cat_remove:'Removed',cat_bulk_edit:'Batch edit'};
 const actionPill=(type,mini)=>{const cls=type==='in'?'good':type==='out'?'bad':type==='cat_add'||type==='cat_bulk_edit'?'info':'neutral';return `<span class="pill actionPill ${cls}${mini?' mini':''}">${ACT_LABELS[type]||type}</span>`};
-const PREFD={catView:'card',catFilter:'',catCols:{category:true,catalog:false,balance:true,earliestExp:true,earliestLot:true,latestExp:true,latestLot:true,status:true},catSort:{key:'name',dir:1},topRange:6,coverUnit:'months',coverSort:'cover-asc',stockRange:6,monthlyBasis:6,usageCategory:'',topCategory:'',coverCategory:'',charts:{usage:false,monthly:true,expiry:true,top:false,cover:true,stock:true},dataScope:'1y',scopeFrom:'',scopeTo:'',activityDensity:'compact',catalogDensity:'compact'};
+const PREFD={catView:'card',catFilter:'',catCols:{category:true,catalog:false,balance:true,earliestExp:true,earliestLot:true,latestExp:true,latestLot:true,status:true},catSort:{key:'name',dir:1},topRange:6,coverUnit:'months',coverSort:'cover-asc',stockRange:6,monthlyBasis:6,usageCategory:'',topCategory:'',coverCategory:'',charts:{usage:false,monthly:true,expiry:true,top:false,cover:true,stock:true},dataScope:'1y',scopeFrom:'',scopeTo:'',activityDensity:'compact',catalogDensity:'compact',idleWarnMin:15,idleGraceMin:15};
 let prefs=Object.assign({},PREFD);
-function hydratePrefs(){const p=db.settings?.preferences||{};prefs=Object.assign({},PREFD,p);prefs.catCols=Object.assign({},PREFD.catCols,p.catCols||{});prefs.catSort=Object.assign({},PREFD.catSort,p.catSort||{});prefs.charts=Object.assign({},PREFD.charts,p.charts||{});if(['today','7d','1m'].includes(prefs.dataScope))prefs.dataScope='all'}
+function hydratePrefs(){const p=db.settings?.preferences||{};prefs=Object.assign({},PREFD,p);prefs.catCols=Object.assign({},PREFD.catCols,p.catCols||{});prefs.catSort=Object.assign({},PREFD.catSort,p.catSort||{});prefs.charts=Object.assign({},PREFD.charts,p.charts||{});if(['today','7d','1m'].includes(prefs.dataScope))prefs.dataScope='all';if(typeof renderIdleSet==='function')renderIdleSet()}
 let prefSaveTimer=null;
 function savePrefs(){db.settings??={};db.settings.preferences=JSON.parse(JSON.stringify(prefs));clearTimeout(prefSaveTimer);prefSaveTimer=setTimeout(async()=>{if(st.owned)await commit();else toast('Enable editing once to save this setting for every computer.',false,{title:'Setting not yet saved'})},180)}
 try{const a=JSON.parse(localStorage.invAct||'{}');if(a.filter)actFilter=Object.assign(actFilter,a.filter);if(a.sort)actSort=a.sort}catch{}
@@ -2343,14 +2410,8 @@ function toast(msg,undo=false,opt={}){
 }
 function fmtDateTime(v){if(!v)return'';const d=new Date(v);return isNaN(d)?'':d.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'})+', '+time12(d)}
 function renderLockBanner(){const b=$('#lockBanner');if(!b)return;const other=!st.owned&&st.lock;if(!other){b.classList.remove('show');return}const started=fmtDateTime(st.lock.startedAt||st.lock.createdAt||st.lock.ts||st.lock.time),refreshed=lastDataRefresh?fmtDateTime(lastDataRefresh):'';$('#lockOwner').textContent=`Read-only: ${st.lock.user||'another user'} is editing.`;$('#lockMeta').textContent=[started&&`Lock started ${started}`,refreshed&&`Data refreshed ${refreshed}`].filter(Boolean).join(' · ');b.classList.add('show')}
-function statusUI(){const e=st.owned;$('#main').classList.toggle('readOnly',!e);$('#edit').classList.toggle('hide',e);$('#stop').classList.toggle('hide',!e);renderGreeting();renderLockBanner();updateBatchDeleteBtn()}
+function statusUI(){const e=st.owned;$('#main').classList.toggle('readOnly',!e);$('#edit').classList.toggle('hide',e);$('#stop').classList.toggle('hide',!e);if(!e)closeIdleWarn();$('#bulkBy').placeholder=$('#batchBy').placeholder=st.user||'';$('#bulkBy').title=$('#batchBy').title=st.user?`Leave blank to record ${st.user}`:'';renderLockBanner();updateBatchDeleteBtn()}
 /* ============ RENDER ============ */
-function renderGreeting(){
-  const h=new Date().getHours(),hello=h<12?'Good morning':h<18?'Good afternoon':'Good evening';
-  const e=st.owned,stateTxt=e?'editing':'not editing',cls=e?'on':'off';
-  const note=(!e&&st.lock)?` <span class="editNote">(${esc(st.lock.user)} is editing)</span>`:'';
-  $('#title').innerHTML=`${hello}, <span class="userName">${esc(st.user||'user')}</span>, you are <span class="editState ${cls}">${stateTxt}</span>${note}`;
-}
 let _idleTok=0;function scheduleIdle(fn){const t=++_idleTok;(window.requestIdleCallback||((f)=>setTimeout(f,1)))(()=>{if(t===_idleTok)fn()},{timeout:400})}
 function render(){
   reindex();
@@ -2439,7 +2500,22 @@ function renderTableInto(el,rowsArg){
     if(sa){sa.onclick=e=>e.stopPropagation();sa.onchange=()=>{const chks=[...el.querySelectorAll('.dashSelChk')];for(const c of chks){c.checked=sa.checked;if(sa.checked)dashSel.add(c.dataset.selid);else dashSel.delete(c.dataset.selid);c.closest('tr').classList.toggle('selOn',sa.checked)}updateBatchDeleteBtn()};syncDashSelAll(el)}
   }
 }
-function renderItems(){$('#viewToggle').querySelectorAll('button').forEach(b=>b.classList.toggle('active',b.dataset.view===prefs.catView));$('#colBtn').classList.toggle('hide',prefs.catView!=='table');if(prefs.catView==='table')renderTableInto($('#items'));else renderCardsInto($('#items'));updateBatchDeleteBtn()}
+/* Card sort presets. Each maps to the same prefs.catSort the table headers
+   use, so switching between Cards and Table keeps one arrangement. */
+const CARD_SORTS=[
+  {key:'name',dir:1,label:'Name A–Z'},{key:'name',dir:-1,label:'Name Z–A'},null,
+  {key:'status',dir:1,label:'Low stock first'},{key:'balance',dir:1,label:'Least stock first'},{key:'balance',dir:-1,label:'Most stock first'},null,
+  {key:'earliestExp',dir:1,label:'Expiring soonest'},{key:'category',dir:1,label:'Category'}];
+function cardSortLabel(){const s=prefs.catSort,p=CARD_SORTS.find(o=>o&&o.key===s.key&&o.dir===s.dir);if(p)return p.label;const c=CAT_COLS.find(x=>x.key===s.key);return `${c?c.label:'Name'} ${s.dir>0?'↑':'↓'}`}
+function renderSortMenu(){const s=prefs.catSort;$('#sortLabel').textContent=cardSortLabel();$('#sortMenu').innerHTML=CARD_SORTS.map((o,k)=>o?`<button type="button" class="sortOpt" role="menuitemradio" aria-checked="${o.key===s.key&&o.dir===s.dir}" data-k="${k}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>${o.label}</button>`:'<div class="sortSep" role="separator"></div>').join('')}
+/* Keep the menu inside the (clipped) cards pane: flip to the button's left
+   edge when it would run off the left, and scroll it when the pane is short. */
+function fitSortMenu(){const m=$('#sortMenu'),pane=m.closest('.dashCardsPane')||document.body;m.classList.remove('alignLeft');m.style.maxHeight='';const p=pane.getBoundingClientRect();let r=m.getBoundingClientRect();if(r.left<p.left+4){m.classList.add('alignLeft');r=m.getBoundingClientRect()}if(r.bottom>p.bottom-4){const k=m.offsetHeight/r.height;m.style.maxHeight=Math.max(120,(p.bottom-4-r.top)*k)+'px'}}
+function closeSortMenu(){$('#sortMenu').classList.remove('open');$('#sortBtn').setAttribute('aria-expanded','false')}
+$('#sortBtn').onclick=e=>{e.stopPropagation();const open=!$('#sortMenu').classList.contains('open');renderSortMenu();$('#sortMenu').classList.toggle('open',open);$('#sortBtn').setAttribute('aria-expanded',String(open));if(open)fitSortMenu();if(open)($('#sortMenu .sortOpt[aria-checked=true]')||$('#sortMenu .sortOpt')).focus()};
+$('#sortMenu').addEventListener('click',e=>{const b=e.target.closest('.sortOpt');if(!b)return;const o=CARD_SORTS[+b.dataset.k];prefs.catSort={key:o.key,dir:o.dir};savePrefs();closeSortMenu();renderItems();renderAllModal();$('#sortBtn').focus()});
+$('#sortMenu').addEventListener('keydown',e=>{if(e.key!=='ArrowDown'&&e.key!=='ArrowUp')return;e.preventDefault();const opts=[...$$('#sortMenu .sortOpt')],i=opts.indexOf(document.activeElement);opts[(i+(e.key==='ArrowDown'?1:-1)+opts.length)%opts.length].focus()});
+function renderItems(){$('#viewToggle').querySelectorAll('button').forEach(b=>b.classList.toggle('active',b.dataset.view===prefs.catView));$('#colBtn').classList.toggle('hide',prefs.catView!=='table');$('#sortBtn').classList.toggle('hide',prefs.catView==='table');$('#sortLabel').textContent=cardSortLabel();if(prefs.catView==='table')renderTableInto($('#items'));else renderCardsInto($('#items'));updateBatchDeleteBtn()}
 let allQuery='',allCat='';
 function fillAllCategory(){const sel=$('#allCategory');if(!sel)return;const cats=distinctCategories();sel.innerHTML='<option value="">All categories</option>'+cats.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join('');if(allCat&&!cats.includes(allCat))allCat='';sel.value=allCat}
 function renderAllModal(){if(!$('#allModal').classList.contains('open'))return;fillAllCategory();$('#allTitle').textContent=prefs.catView==='table'?'All items — table':'All items — cards';const el=$('#allBody'),rows=itemsView(allCat,allQuery);$('#allCount').textContent=`${rows.length} item${rows.length===1?'':'s'}`;if(prefs.catView==='table')renderTableInto(el,rows);else renderCardsInto(el,rows)}
@@ -3030,7 +3106,13 @@ function applyCatalogScan(){const raw=$('#catScan').value;if(!raw)return;const p
 $('#catScan').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();applyCatalogScan()}});
 $('#catScan').addEventListener('input',()=>{if($('#catScan').value.includes('\x1d'))applyCatalogScan()});
 function setBulkMode(mode){bulkMode=mode;$('#bulkDateLabel').textContent='Date'}
-function updateBulkActions(){const it=bulkCurrentItem(),itemOk=!!it,lotOk=!!$('#bulkLot').value.trim(),expOk=!!$('#bulkExp').value||!!it?.noEx;$('#checkItem').classList.toggle('ok',itemOk);$('#checkLot').classList.toggle('ok',lotOk);$('#checkExp').classList.toggle('ok',expOk);$('#bulkLogin').disabled=!(itemOk&&lotOk&&expOk);/* Log out uses the open entry's own expiry, so it never needs one here. */$('#bulkLogout').disabled=!(itemOk&&lotOk)}
+/* Open lots for the chosen item, earliest expiry first. Clicking one fills
+   Lot and Expiry, so logging out never needs the lot typed or scanned. */
+function renderBulkLots(it){const el=$('#bulkLots');const open=it?entries(it.id).filter(e=>e.left>0).sort((a,b)=>(a.exp||'').localeCompare(b.exp||'')):[];if(!open.length){el.hidden=true;el.innerHTML='';return}const cur=$('#bulkLot').value.trim().toUpperCase(),show=open.slice(0,4);
+  el.hidden=false;el.innerHTML=`<span class="lotChipsLbl">In stock</span>`+show.map(e=>`<button type="button" class="lotChip${(e.lot||'').toUpperCase()===cur?' on':''}" data-lot="${esc(e.lot||'')}" data-exp="${esc(e.exp||'')}" title="Use lot ${esc(e.lot||'')}"><b class="mono">${esc(e.lot||'—')}</b><span>${e.left} left · ${e.exp&&e.exp!=='9999-12-31'?fmt(e.exp):'no expiry'}</span></button>`).join('')+(open.length>show.length?`<span class="lotChipsMore">+${open.length-show.length} more</span>`:'')}
+$('#bulkLots').addEventListener('click',e=>{const b=e.target.closest('.lotChip');if(!b)return;$('#bulkLot').value=b.dataset.lot;if(b.dataset.exp)$('#bulkExp').value=b.dataset.exp;updateBulkActions();$('#bulkQty').focus();try{$('#bulkQty').select()}catch{}});
+$$('.qtyStep').forEach(b=>b.onclick=()=>{const q=$('#bulkQty');q.value=Math.max(1,(Math.round(+q.value)||1)+(+b.dataset.step))});
+function updateBulkActions(){renderBulkLots(bulkCurrentItem());const it=bulkCurrentItem(),itemOk=!!it,lotOk=!!$('#bulkLot').value.trim(),expOk=!!$('#bulkExp').value||!!it?.noEx;$('#checkItem').classList.toggle('ok',itemOk);$('#checkLot').classList.toggle('ok',lotOk);$('#checkExp').classList.toggle('ok',expOk);$('#bulkLogin').disabled=!(itemOk&&lotOk&&expOk);/* Log out uses the open entry's own expiry, so it never needs one here. */$('#bulkLogout').disabled=!(itemOk&&lotOk)}
 $('#bulkScan').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();applyBulkScan()}});$('#bulkScan').addEventListener('input',()=>{if($('#bulkScan').value.includes('\x1d'))applyBulkScan()});
 $('#clearBulkRef').onclick=()=>{$('#bulkRef').value='';bulkSelectedItemId='';updateBulkActions();$('#bulkRef').focus()};
 $('#clearBulkScan').onclick=()=>{bulkLastParsed=null;bulkSelectedItemId='';['bulkScan','bulkRef','bulkLot','bulkExp','bulkRemarks'].forEach(id=>$('#'+id).value='');$('#bulkQty').value=1;$('#bulkDate').value=today();$('#bulkScanResult').className='scanResult scanResultSlot';$('#bulkScanResult').innerHTML='';updateBulkActions();$('#bulkScan').focus()};
@@ -3049,7 +3131,7 @@ $('#bulkRefToggle').onclick=()=>{if(bulkRefOpen)closeBulkRefDropdown();else{$('#
 addEventListener('resize',()=>{if(bulkRefOpen)positionBulkRefDropdown()});
 async function submitBulk(mode){setBulkMode(mode);if(!st.owned)return toast('Enable editing first');const it=item(bulkSelectedItemId)||findBulkItem($('#bulkRef').value)||bulkResolve();if(!it)return toast('Select a catalog item');if(bulkLastParsed?.gtin&&it.gtin!==bulkLastParsed.gtin)it.gtin=bulkLastParsed.gtin;const lot=$('#bulkLot').value.trim(),exp=$('#bulkExp').value||(it.noEx?'9999-12-31':''),q=+$('#bulkQty').value||1,date=$('#bulkDate').value||today(),by=$('#bulkBy').value||st.user,remarks=$('#bulkRemarks').value;
   const duplicate=db.transactions.find(x=>!x.undone&&x.type===mode&&x.itemId===it.id&&String(x.lot||'').toUpperCase()===lot.toUpperCase()&&+x.qty===q&&x.date===date&&Date.now()-(x.ts||0)<120000);if(duplicate&&!arguments[1]){confirmAction('Possible duplicate transaction',`A matching ${mode==='in'?'log-in':'log-out'} for ${it.name}, lot ${lot}, quantity ${q}, was recorded recently. Submit it again?`,()=>submitBulk(mode,true));return}
-  let t;if(bulkMode==='in')t={id:uid(),type:'in',itemId:it.id,lot,exp,qty:q,date,by,remarks,ts:Date.now(),undone:false};else{const en=entries(it.id).find(x=>x.lot.toUpperCase()===lot.toUpperCase())||entries(it.id).find(x=>x.lot.toUpperCase().includes(lot.toUpperCase()));if(!en)return toast(`No open entry matches lot ${lot}`);if(q>en.left)return toast(`Only ${en.left} left in lot ${en.lot}`);const first=isFirstOut(en.id);t={id:uid(),type:'out',itemId:it.id,entryId:en.id,lot:en.lot,exp:en.exp,qty:q,date,by,remarks,ts:Date.now(),undone:false};t._first=first}db.transactions.push(t);lastAction=t.id;if(await commit()){toast(`${it.name} · lot ${t.lot} · ${q} unit(s)`,true,{title:bulkMode==='in'?'Logged in':'Logged out',icon:bulkMode});if(t._first)maybeVerify(it.id,t.lot);$('#bulkQty').value=1;renderScanRecent();$('#bulkScan').focus()}}
+  let t;if(bulkMode==='in')t={id:uid(),type:'in',itemId:it.id,lot,exp,qty:q,date,by,remarks,ts:Date.now(),undone:false};else{const en=entries(it.id).find(x=>x.lot.toUpperCase()===lot.toUpperCase())||entries(it.id).find(x=>x.lot.toUpperCase().includes(lot.toUpperCase()));if(!en)return toast(`No open entry matches lot ${lot}`);if(q>en.left)return toast(`Only ${en.left} left in lot ${en.lot}`);const first=isFirstOut(en.id);t={id:uid(),type:'out',itemId:it.id,entryId:en.id,lot:en.lot,exp:en.exp,qty:q,date,by,remarks,ts:Date.now(),undone:false};t._first=first}db.transactions.push(t);lastAction=t.id;if(await commit()){toast(`${it.name} · lot ${t.lot} · ${q} unit(s)`,true,{title:bulkMode==='in'?'Logged in':'Logged out',icon:bulkMode});if(t._first)maybeVerify(it.id,t.lot);$('#bulkQty').value=1;updateBulkActions();renderScanRecent();$('#bulkScan').focus()}}
 $('#bulkForm').onsubmit=e=>e.preventDefault();$('#bulkLogin').onclick=()=>submitBulk('in');$('#bulkLogout').onclick=()=>submitBulk('out');
 /* ---- Batch scan mode: queue multiple scans, set qty/direction/lot/expiry
    per item, confirm everything as one batch. ---- */
@@ -3513,9 +3595,12 @@ $('#backupBtn').onclick=async()=>{beginLoading();let r;try{r=await desk.backup()
 $('#restoreBtn').onclick=()=>{if(!st.owned)return toast('Enable editing before restoring');confirmAction('Restore from backup?','Restoring will overwrite the current inventory with the backup file you choose next.',async()=>{beginLoading();let r;try{r=await desk.restore()}finally{endLoading()}if(r&&r.canceled)return;if(r&&r.ok){await load();toast('Inventory restored from backup',false,{title:'Restore',icon:'ok'})}else toast('Restore failed'+(r&&r.error?': '+r.error:''))})};
 /* ============ APPEARANCE ============ */
 function normalizeSettings(){let s=db.settings;if(!s.theme)s.theme='glass';if(s.font==='system')s.font='styrene';if(s.font==='mono')s.font='anthropicserif';if(!FAMILY_IDS.has(s.theme)){const map=OLD_MAP[s.theme]||['glass','light'];s.theme=map[0];if(!s.mode)s.mode=map[1]}if(!s.mode)s.mode=(s.theme==='cyberpunk'||s.theme==='genshin'||s.theme==='liquid')?'dark':'light';if(!s.modeChosen&&(s.theme==='cyberpunk'||s.theme==='genshin'||s.theme==='liquid')&&s.mode!=='dark'){s.mode='dark';s.modeChosen=true}if(!s.font)s.font='sfpro';if(!s.fontSize)s.fontSize=14;if(s.quickLogoutMode!=='fifo'&&s.quickLogoutMode!=='fefo')s.quickLogoutMode='fefo';if(!Array.isArray(s.countHistory))s.countHistory=[];db.items.forEach(i=>{if(i.shipmentAction===undefined)i.shipmentAction='none';if(i.category===undefined)i.category=''})}
-const UI_SCALE_BASE=1.10,UI_SCALE_MIN=0.85,UI_SCALE_MAX=1.3,UI_SCALE_STEP=0.05;
-function getUiScaleFactor(){const v=parseFloat(localStorage.getItem('invUiScaleFactor'));return Number.isFinite(v)?Math.min(UI_SCALE_MAX,Math.max(UI_SCALE_MIN,v)):1}
-function applyScale(){const f=getUiScaleFactor();document.documentElement.style.zoom=(UI_SCALE_BASE*f).toFixed(3);const rd=$('#scaleValue');if(rd)rd.textContent=Math.round(f*100)+'%';const rb=$('#scaleReset');if(rb)rb.disabled=Math.abs(f-1)<0.001}
+/* Display scale is one of four fixed sizes. Older builds stored any value in
+   0.85–1.3 (5% steps); those snap to the nearest of these. */
+const UI_SCALE_BASE=1.10,UI_SCALES=[0.9,1,1.2,1.4];
+const snapUiScale=v=>Number.isFinite(v)?UI_SCALES.reduce((a,b)=>Math.abs(b-v)<Math.abs(a-v)?b:a):1;
+function getUiScaleFactor(){let v=NaN;try{v=parseFloat(localStorage.getItem('invUiScaleFactor'))}catch{}return snapUiScale(v)}
+function applyScale(){const f=getUiScaleFactor();document.documentElement.style.zoom=(UI_SCALE_BASE*f).toFixed(3);$$('#scaleMode button').forEach(b=>{const on=Math.abs(+b.dataset.scale-f)<0.001;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on))})}
 function motionOverrideOn(){try{return localStorage.getItem('invMotionOverride')==='1'}catch{return false}}
 function applyMotion(){const on=motionOverrideOn();document.documentElement.dataset.motion=on?'on':'auto';const cb=$('#motionToggle');if(cb)cb.checked=on}
 function initMotion(){applyMotion();const cb=$('#motionToggle');if(!cb)return;cb.onchange=()=>{try{localStorage.setItem('invMotionOverride',cb.checked?'1':'0')}catch{}applyMotion();if(document.documentElement.dataset.family==='genshin'){gsBuiltKey='';buildGenshinStars()}if(!cb.checked)gsReset();toast(cb.checked?'Motion override enabled — theme animations run even when Windows reduced motion is on.':'Motion override disabled — theme animations follow Windows reduced motion.',false,{title:'Motion'})}}
@@ -3588,7 +3673,7 @@ document.addEventListener('visibilitychange',syncMotionPause);
 window.addEventListener('blur',()=>{document.documentElement.dataset.motionPaused='1'});
 window.addEventListener('focus',syncMotionPause);
 syncMotionPause();
-async function setUiScaleFactor(f){f=Math.min(UI_SCALE_MAX,Math.max(UI_SCALE_MIN,Math.round(f/UI_SCALE_STEP)*UI_SCALE_STEP));try{localStorage.setItem('invUiScaleFactor',String(f))}catch{}applyScale();if(window.desk?.resizeWindow){await desk.resizeWindow(f);fixViewportHeight();const av=document.querySelector('.view.active')?.id;if(av==='activity'){remeasureMainHist();renderHist()}else if(av==='scanops'){remeasureScanCat();remeasureScanHist();renderCat();renderScanRecent()}else if(av==='stockcount'){renderStockCount()}}}
+async function setUiScaleFactor(f){f=snapUiScale(f);try{localStorage.setItem('invUiScaleFactor',String(f))}catch{}applyScale();if(window.desk?.resizeWindow){await desk.resizeWindow(f);fixViewportHeight();const av=document.querySelector('.view.active')?.id;if(av==='activity'){remeasureMainHist();renderHist()}else if(av==='scanops'){remeasureScanCat();remeasureScanHist();renderCat();renderScanRecent()}else if(av==='stockcount'){renderStockCount()}}}
 function applyAppearance(){const s=db.settings,root=document.documentElement;root.dataset.family=s.theme||'glass';root.dataset.mode=s.mode||'light';applyGraphics();root.style.setProperty('--font',(FONTS.find(f=>f.id===s.font)||FONTS[0]).stack);root.style.setProperty('--fs',(s.fontSize||14)+'px');applyScale();if((s.theme||'glass')==='genshin'){applyGenshinElement();buildGenshinStars();gsReset()}else gsReset();renderAppearance()}
 function renderAppearance(){
   const fam=db.settings.theme||'glass',mode=db.settings.mode||'light',font=db.settings.font||'sfpro',fs=db.settings.fontSize||14;
@@ -3604,7 +3689,7 @@ $('#saveAppName').onclick=async()=>{db.settings.appName=$('#appName').value.trim
 $('#modeToggle').onclick=async()=>{db.settings.mode=(db.settings.mode==='dark')?'light':'dark';db.settings.modeChosen=true;applyAppearance();if(st.owned)await commit();else toast('Enable editing once to save light/dark mode for every computer.',false,{title:'Mode preview only'})};
 function fillSelect(sel,opts,val){sel.innerHTML=opts.map(([v,l])=>`<option value="${v}">${l}</option>`).join('');sel.value=val}
 function renderScopeSel(){if(!['all','6m','1y','custom'].includes(prefs.dataScope))prefs.dataScope='all';const custom=prefs.dataScope==='custom';$$('#scopeChooser button').forEach(b=>b.classList.toggle('active',b.dataset.scope===prefs.dataScope));$('#scopeFrom').value=prefs.scopeFrom||'';$('#scopeTo').value=prefs.scopeTo||'';$('#scopeDates').classList.add('show');$('#scopeDates').classList.toggle('inactive',!custom);['scopeFrom','scopeTo'].forEach(id=>{$('#'+id).disabled=!custom})}
-function renderScaleSel(){applyScale();$('#scaleDown').onclick=()=>setUiScaleFactor(getUiScaleFactor()-UI_SCALE_STEP);$('#scaleUp').onclick=()=>setUiScaleFactor(getUiScaleFactor()+UI_SCALE_STEP);$('#scaleReset').onclick=()=>setUiScaleFactor(1)}
+function renderScaleSel(){applyScale();$$('#scaleMode button').forEach(b=>b.onclick=()=>setUiScaleFactor(+b.dataset.scale))}
 $$('#scopeChooser button').forEach(b=>b.onclick=()=>{prefs.dataScope=b.dataset.scope;savePrefs();renderScopeSel();render()});
 ['scopeFrom','scopeTo'].forEach(id=>$('#'+id).onchange=e=>{prefs[id]=e.target.value;prefs.dataScope='custom';renderScopeSel();savePrefs();render()});
 /* ============ RESIZABLE SCAN / CATALOG PANELS ============ */
@@ -3654,112 +3739,96 @@ function renderScanPane(){
   if(activePane==='historyView'){const v=$('#historyView');remeasureScanHist();renderScanRecent();ensureScanFit(v,renderScanRecent)}
   else{const v=$('#catalogView');remeasureScanCat();renderCat();ensureScanFit(v,renderCat)}
 }
-let stockCountActive=false,stockCountData={},scHistory=[],scTouched=new Set(),scChecked=new Set();
-function scCountedSet(){const s=new Set(scTouched);scChecked.forEach(id=>s.add(id));return s}
-function scCountedTotal(){return scCountedSet().size}
-function scApplyEnabled(){return stockCountActive&&(scHasVariance()||scTouched.size>0||scChecked.size>0)}
-function scHasVariance(){return db.items.some(i=>{const c=stockCountData[i.id];return c!==undefined&&c!==bal(i.id)})}
-function scSetProgress(){const t=stockCountActive?scCountedTotal():0,n=db.items.length;$('#scProgText').innerHTML=stockCountActive?`<span class="scDone">${t}</span> of ${n} item(s) counted`:'Type a quantity into any row to begin counting';$('#scProgFill').style.width=n?Math.round(t/n*100)+'%':'0%'}
-function scSetCounted(id,next,src){
-  const cur=stockCountData[id];
-  if(next===cur)return false;
-  const last=scHistory[scHistory.length-1];
-  if(!(src==='input'&&last&&last.id===id&&last.src==='input'))scHistory.push({id,prev:cur,src});
-  if(next===undefined)delete stockCountData[id];else stockCountData[id]=next;
-  return true;
+/* ============ STOCK COUNT ============
+   A count holds only the items someone actually counted: { itemId: qty }.
+   Rows start blank (the system quantity shows as a hint); typing a number
+   or pressing ✓ ("matches") marks the row counted. The draft is kept on this
+   computer until it is applied or discarded, so closing the app loses nothing. */
+let scCounts={},scUndoStack=[],scShowMode='all',scPrinting=false,scDraftTs=0;
+const SC_DRAFT_KEY='invCountDraft';
+const scActive=()=>Object.keys(scCounts).length>0;
+function scSaveDraft(){try{if(scActive()){if(!scDraftTs)scDraftTs=Date.now();localStorage.setItem(SC_DRAFT_KEY,JSON.stringify({ts:scDraftTs,counts:scCounts}))}else{scDraftTs=0;localStorage.removeItem(SC_DRAFT_KEY)}}catch{}}
+function scRestoreDraft(){let d=null;try{d=JSON.parse(localStorage.getItem(SC_DRAFT_KEY)||'null')}catch{}if(!d||!d.counts)return;const ids=new Set(db.items.map(i=>i.id));scCounts={};Object.entries(d.counts).forEach(([id,q])=>{if(ids.has(id)&&Number.isFinite(+q))scCounts[id]=Math.max(0,Math.round(+q))});scDraftTs=scActive()?(+d.ts||Date.now()):0;scSaveDraft();if(scActive())toast(`Resumed the count you started ${fmtDateTime(scDraftTs)} (${Object.keys(scCounts).length} item${Object.keys(scCounts).length===1?'':'s'} counted).`,false,{title:'Stock count'})}
+function scSet(id,next,coalesce){const cur=scCounts[id];if(next===cur)return;const last=scUndoStack[scUndoStack.length-1];if(!(coalesce&&last&&last.id===id&&last.coalesce))scUndoStack.push({id,prev:cur,coalesce:!!coalesce});if(next===undefined)delete scCounts[id];else scCounts[id]=next;scSaveDraft()}
+function scScopeItems(){const cat=$('#scCategoryFilter').value;return db.items.filter(i=>!cat||catOf(i)===cat).sort((a,b)=>(a.name||'').localeCompare(b.name||''))}
+function scDiffOf(id){const c=scCounts[id];return c===undefined?null:c-bal(id)}
+function scVisibleItems(){if(scPrinting)return scScopeItems();const q=$('#scSearch').value.trim().toLowerCase();return scScopeItems().filter(i=>{if(q&&![i.name,i.catalog,catOf(i)].join(' ').toLowerCase().includes(q))return false;if(scShowMode==='todo')return scCounts[i.id]===undefined;if(scShowMode==='diff'){const d=scDiffOf(i.id);return d!==null&&d!==0}return true})}
+function scDiffHTML(d){return d===null?'<span class="scNone">—</span>':d===0?'<span class="pill good scVariance">Match</span>':`<span class="pill ${d>0?'info':'bad'} scVariance">${d>0?'+':''}${d}</span>`}
+function scChanges(){return Object.entries(scCounts).filter(([id,q])=>item(id)&&q!==bal(id))}
+function scSetProgress(){
+  const scope=scScopeItems(),n=scope.length,done=scope.filter(i=>scCounts[i.id]!==undefined).length,diffs=scope.filter(i=>{const d=scDiffOf(i.id);return d!==null&&d!==0}).length,cat=$('#scCategoryFilter').value;
+  $('#scProgText').innerHTML=!db.items.length?'Add catalog items to start counting':!scActive()?'Type what is on the shelf, or press ✓ when it matches':`<b class="scDone">${done}</b> of ${n} ${cat?esc(cat)+' ':''}item${n===1?'':'s'} counted${diffs?` · <span class="scDiffCount">${diffs} difference${diffs===1?'':'s'}</span>`:''}`;
+  $('#scProgFill').style.width=n?Math.round(done/n*100)+'%':'0%';
+  $('#scApply').disabled=!scActive();$('#scUndo').disabled=!scUndoStack.length;$('#scDiscard').disabled=!scActive();
 }
-function scItemsList(){const cat=$('#scCategoryFilter').value;return db.items.filter(i=>!cat||catOf(i)===cat).sort((a,b)=>(a.name||'').localeCompare(b.name||''))}
-function scVarianceHTML(variance){return variance===null?'<span class="muted">-</span>':variance===0?'<span class="pill good scVariance">0</span>':`<span class="pill ${variance>0?'info':'bad'} scVariance">${variance>0?'+':''}${variance}</span>`}
-function scMoveFocus(inp,dir){const inputs=[...$('#scBody').querySelectorAll('.scCountInput')];if(!inputs.length)return;let idx=inputs.indexOf(inp)+dir;if(idx<0)idx=0;if(idx>=inputs.length)idx=inputs.length-1;const next=inputs[idx];next.focus();try{next.select()}catch{}}
-function renderScHistory(){const h=db.settings.countHistory||[];$('#scHistMeta').textContent=h.length?`${h.length} record(s)`:'';$('#scHistBody').innerHTML=h.map(e=>`<tr><td class="mono">${fmtDateTime(e.ts)}</td><td>${esc(e.user||'-')}</td><td>${(e.cats&&e.cats.length)?e.cats.map(c=>categoryPill({category:c})).join(' '):'<span class="muted">-</span>'}</td><td class="mono">${e.counted??0}</td><td class="mono">${e.applied??0}</td><td class="mono">${(e.added>0?'+':'')+(e.added||0)}</td><td class="mono">${(e.removed>0?'-':'')+(e.removed||0)}</td></tr>`).join('')||'<tr><td colspan="7"><div class="emptyState">No stock counts applied yet.</div></td></tr>'}
+function scRowHTML(i){const sys=bal(i.id),c=scCounts[i.id],has=c!==undefined,match=has&&c===sys;
+  return `<tr class="${has?'scCounted':''}" data-id="${i.id}"><td title="${esc(i.name)}">${esc(i.name)}</td><td>${categoryPill(i)}</td><td class="mono">${esc(i.catalog||'—')}</td><td class="mono scSys">${sys}</td><td><span class="scCountCell"><input type="number" min="0" inputmode="numeric" class="scCountInput" data-id="${i.id}" value="${has?c:''}" placeholder="–" aria-label="Counted quantity for ${esc(i.name)}"><button type="button" class="scMatch${match?' on':''}" data-id="${i.id}" aria-pressed="${match}" title="${match?'Clear this count':`Matches the system (${sys})`}" aria-label="${match?'Clear count for':'Mark as matching for'} ${esc(i.name)}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></button></span></td><td class="scVarianceCell">${scDiffHTML(has?c-sys:null)}</td></tr>`}
+function scRefreshRow(id){const tr=$('#scBody').querySelector(`tr[data-id="${id}"]`),it=item(id);if(!tr||!it)return;const sys=bal(id),c=scCounts[id],has=c!==undefined,match=has&&c===sys;tr.classList.toggle('scCounted',has);const inp=tr.querySelector('.scCountInput');if(document.activeElement!==inp)inp.value=has?c:'';const m=tr.querySelector('.scMatch');m.classList.toggle('on',match);m.setAttribute('aria-pressed',String(match));m.title=match?'Clear this count':`Matches the system (${sys})`;tr.querySelector('.scVarianceCell').innerHTML=scDiffHTML(has?c-sys:null);scSetProgress()}
+function scMoveFocus(from,dir){const inputs=[...$('#scBody').querySelectorAll('.scCountInput')];if(!inputs.length)return;let idx=inputs.indexOf(from)+dir;idx=Math.max(0,Math.min(inputs.length-1,idx));const next=inputs[idx];next.focus();try{next.select()}catch{}next.closest('tr')?.scrollIntoView({block:'nearest'})}
+function renderScHistory(){const h=db.settings.countHistory||[];$('#scHistMeta').textContent=h.length?`${h.length} record${h.length===1?'':'s'}`:'None yet';$('#scHistBody').innerHTML=h.map(e=>`<tr><td class="mono">${fmtDateTime(e.ts)}</td><td>${esc(e.user||'-')}</td><td>${(e.cats&&e.cats.length)?e.cats.map(c=>categoryPill({category:c})).join(' '):'<span class="muted">-</span>'}</td><td class="mono">${e.counted??0}</td><td class="mono">${e.applied??0}</td><td class="mono">${(e.added>0?'+':'')+(e.added||0)}</td><td class="mono">${(e.removed>0?'-':'')+(e.removed||0)}</td></tr>`).join('')||'<tr><td colspan="7"><div class="emptyState">No stock counts applied yet.</div></td></tr>'}
 function renderStockCount(){
   const prevCat=$('#scCategoryFilter').value;
   $('#scCategoryFilter').innerHTML='<option value="">All categories</option>'+distinctCategories().map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join('');
   if(prevCat&&[...$('#scCategoryFilter').options].some(o=>o.value===prevCat))$('#scCategoryFilter').value=prevCat;
-  const items=scItemsList();
-  scSetProgress();
-  $('#scApply').disabled=!scApplyEnabled();
-  $('#scUndo').disabled=!stockCountActive||!scHistory.length;
-  $('#scDiscard').disabled=!stockCountActive;
-  $('#scNewCount').classList.toggle('scQuiet',stockCountActive);
-  $('#scBody').innerHTML=items.map(i=>{
-    const sys=bal(i.id),counted=stockCountData[i.id],hasCounted=counted!==undefined,variance=hasCounted?counted-sys:null,checked=scChecked.has(i.id);
-    return `<tr class="${(hasCounted||checked)?'scCounted':''}" data-id="${i.id}"><td>${esc(i.name)}</td><td>${categoryPill(i)}</td><td class="mono">${esc(i.catalog||'-')}</td><td class="mono">${sys}</td><td><input type="checkbox" class="scCheckBox" data-id="${i.id}" ${checked?'checked':''} aria-label="Counted?"></td><td><input type="number" min="0" class="scCountInput" data-id="${i.id}" value="${hasCounted?counted:''}" placeholder="-"></td><td class="scVarianceCell">${scVarianceHTML(variance)}</td></tr>`;
-  }).join('')||'<tr><td colspan="7"><div class="emptyState">No items match this filter.</div></td></tr>';
-  $('#scBody').querySelectorAll('.scCountInput').forEach(inp=>{
-    inp.oninput=()=>{
-      const id=inp.dataset.id,v=inp.value.trim(),selStart=inp.selectionStart;
-      if(!stockCountActive)startNewCount(true);
-      scSetCounted(id,v===''?undefined:Math.max(0,Math.round(+v)),'input');
-      if(v==='')scTouched.delete(id);else scTouched.add(id);
-      const tr=$('#scBody').querySelector(`tr[data-id="${id}"]`);if(!tr)return;
-      const inp2=tr.querySelector('.scCountInput');const shown=stockCountData[id];if(inp2){if(inp2.value!==String(shown??''))inp2.value=shown===undefined?'':shown;if(document.activeElement!==inp2){inp2.focus();try{const p=Math.min(selStart??0,inp2.value.length);inp2.setSelectionRange(p,p)}catch{}}}
-      const sys=bal(id),hasCounted=stockCountData[id]!==undefined,variance=hasCounted?stockCountData[id]-sys:null;
-      tr.classList.toggle('scCounted',hasCounted||scChecked.has(id));
-      tr.querySelector('.scVarianceCell').innerHTML=scVarianceHTML(variance);
-      scSetProgress();
-      $('#scApply').disabled=!scApplyEnabled();
-    };
-    inp.onkeydown=e=>{
-      if(e.key==='Enter'){e.preventDefault();const v=inp.value.trim();if(v!=='')scTouched.add(inp.dataset.id);scSetProgress();scMoveFocus(inp,e.shiftKey?-1:1)}
-      else if(e.key==='ArrowDown'){e.preventDefault();scMoveFocus(inp,1)}
-      else if(e.key==='ArrowUp'){e.preventDefault();scMoveFocus(inp,-1)}
-    };
-  });
-  $('#scBody').querySelectorAll('.scCheckBox').forEach(cb=>{
-    cb.onchange=()=>{
-      const id=cb.dataset.id;
-      scHistory.push({chk:id,prev:scChecked.has(id)});
-      if(cb.checked)scChecked.add(id);else scChecked.delete(id);
-      const tr=$('#scBody').querySelector(`tr[data-id="${id}"]`);if(tr)tr.classList.toggle('scCounted',stockCountData[id]!==undefined||scChecked.has(id));
-      scSetProgress();
-      $('#scApply').disabled=!scApplyEnabled();
-    };
-  });
-  renderScHistory();
+  $$('#scShow button').forEach(b=>{const on=b.dataset.show===scShowMode;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on))});
+  const rows=scVisibleItems();
+  const empty=!db.items.length?'No catalog items yet. Add items in Scan/Catalog first.':scShowMode==='todo'&&$('#scSearch').value.trim()===''?'Everything here has been counted.':scShowMode==='diff'?'No differences so far.':'No items match this search.';
+  $('#scBody').innerHTML=rows.map(scRowHTML).join('')||`<tr><td colspan="6"><div class="emptyState">${empty}</div></td></tr>`;
+  scSetProgress();renderScHistory();
 }
-function startNewCount(quiet){
-  const prev={};db.items.forEach(i=>{prev[i.id]=stockCountData[i.id]});
-  stockCountActive=true;stockCountData={};scHistory=[];scTouched=new Set();scChecked=new Set();
-  db.items.forEach(i=>{stockCountData[i.id]=bal(i.id)});
-  scHistory.push({bulk:true,prev});
-  renderStockCount();
-  if(!quiet)toast(`All ${db.items.length} item(s) pre-filled with system quantities - verify or correct as you go`,false,{title:'Stock count',icon:'ok'});
-}
+$('#scBody').addEventListener('input',e=>{const inp=e.target.closest('.scCountInput');if(!inp)return;const v=inp.value.trim();scSet(inp.dataset.id,v===''?undefined:Math.max(0,Math.round(+v)),true);scRefreshRow(inp.dataset.id)});
+$('#scBody').addEventListener('keydown',e=>{const inp=e.target.closest('.scCountInput');if(!inp)return;
+  if(e.key==='Enter'){e.preventDefault();scMoveFocus(inp,e.shiftKey?-1:1)}
+  else if(e.key==='ArrowDown'){e.preventDefault();scMoveFocus(inp,1)}
+  else if(e.key==='ArrowUp'){e.preventDefault();scMoveFocus(inp,-1)}});
+$('#scBody').addEventListener('focusout',e=>{const inp=e.target.closest('.scCountInput');if(inp){const tr=inp.closest('tr');const last=scUndoStack[scUndoStack.length-1];if(last)last.coalesce=false;if(tr)scRefreshRow(inp.dataset.id)}});
+$('#scBody').addEventListener('click',e=>{const b=e.target.closest('.scMatch');if(!b)return;const id=b.dataset.id,sys=bal(id);scSet(id,scCounts[id]===sys?undefined:sys,false);scRefreshRow(id);const inp=b.closest('tr')?.querySelector('.scCountInput');if(inp&&scCounts[id]!==undefined)scMoveFocus(inp,1)});
+$$('#scShow button').forEach(b=>b.onclick=()=>{scShowMode=b.dataset.show;renderStockCount()});
+let _scSearchT;$('#scSearch').oninput=()=>{clearTimeout(_scSearchT);_scSearchT=setTimeout(renderStockCount,120)};
+/* Enter in the search box accepts a barcode scan or a typed name: it jumps
+   to that item's Counted box, ready for the quantity. */
+$('#scSearch').addEventListener('keydown',e=>{if(e.key!=='Enter')return;e.preventDefault();const raw=$('#scSearch').value;if(!raw.trim())return;const p=parseScan(raw),ref=p.ref||p.gtin,hit=ref?matchItemByRef(ref):null;
+  if(hit){$('#scSearch').value='';if($('#scCategoryFilter').value&&catOf(hit)!==$('#scCategoryFilter').value)$('#scCategoryFilter').value='';scShowMode='all'}
+  clearTimeout(_scSearchT);renderStockCount();
+  const target=hit?$('#scBody').querySelector(`.scCountInput[data-id="${hit.id}"]`):$('#scBody').querySelector('.scCountInput');
+  if(target){target.focus();try{target.select()}catch{}target.closest('tr').scrollIntoView({block:'center'});target.closest('tr').classList.add('scFlash');setTimeout(()=>target.closest('tr')?.classList.remove('scFlash'),900)}
+  else toast(ref?`No catalog item matches ${ref}`:'No items match this search',false,{title:'Stock count'})});
+function scClear(){scCounts={};scUndoStack=[];scSaveDraft();renderStockCount()}
+$('#scDiscard').onclick=()=>{if(!scActive())return;const n=Object.keys(scCounts).length;confirmAction('Discard this count?',`The ${n} counted quantit${n===1?'y':'ies'} will be cleared. Stock levels are not changed.`,scClear)};
+$('#scUndo').onclick=()=>{const h=scUndoStack.pop();if(!h)return;if(h.prev===undefined)delete scCounts[h.id];else scCounts[h.id]=h.prev;scSaveDraft();renderStockCount();toast(`${item(h.id)?.name||'Item'}: ${h.prev===undefined?'count cleared':`back to ${h.prev}`}`,false,{title:'Undone',icon:'ok'})};
 function applyStockCountAdjustment(id,countedQty){
   const sysQty=bal(id),delta=countedQty-sysQty;
   if(delta===0)return;
   if(delta>0){db.transactions.push({id:uid(),type:'in',itemId:id,lot:'ADJUSTMENT',exp:'9999-12-31',qty:delta,date:today(),by:st.user||'',remarks:'Stock count adjustment',ts:Date.now(),undone:false})}
   else{let left=-delta;for(const en of entries(id)){if(left<=0)break;const q=Math.min(left,en.left);if(q<=0)continue;db.transactions.push({id:uid(),type:'out',itemId:id,entryId:en.id,lot:en.lot,exp:en.exp,qty:q,date:today(),by:st.user||'',remarks:'Stock count adjustment',ts:Date.now(),undone:false});left-=q}}
 }
-$('#scNewCount').onclick=()=>{if(stockCountActive&&scTouched.size>0)confirmAction('Start a new count?','This will discard the current count in progress. Continue?',startNewCount);else startNewCount()};
-$('#scDiscard').onclick=()=>{if(!stockCountActive)return;confirmAction('Discard count?','All entered counts will be lost. Continue?',()=>{stockCountActive=false;stockCountData={};scHistory=[];scTouched=new Set();scChecked=new Set();renderStockCount()})};
-function scUndo(){const h=scHistory.pop();if(!h)return;if(h.bulk){Object.entries(h.prev).forEach(([id,v])=>{v===undefined?delete stockCountData[id]:stockCountData[id]=v});scTouched=new Set()}else if('chk'in h){h.prev?scChecked.add(h.chk):scChecked.delete(h.chk)}else if(h.prev===undefined){delete stockCountData[h.id];scTouched.delete(h.id)}else stockCountData[h.id]=h.prev;renderStockCount();toast(h.bulk?'Pre-fill reverted - all rows cleared':'chk'in h?`${item(h.chk)?.name||'Item'} counted mark reverted`:`${item(h.id)?.name||'Item'} count reverted`,false,{title:'Undone',icon:'ok'})}
-$('#scUndo').onclick=scUndo;
 $('#scApply').onclick=()=>{
   if(!st.owned)return toast('Enable editing to apply adjustments');
-  const changes=Object.entries(stockCountData).filter(([id,qty])=>item(id)&&qty!==bal(id));
-  const counted=scCountedSet();
-  if(!changes.length&&!counted.size)return toast('Nothing counted yet - enter a quantity or tick Counted? on an item');
-  const cats=[...new Set([...counted].map(id=>catOf(item(id)||{})))].sort((a,b)=>a.localeCompare(b));
-  confirmAction(changes.length?'Apply stock count adjustments?':'Record this stock count?',changes.length?`This creates adjustment log-in/out transactions for ${changes.length} item(s) so system quantities match what was counted. Continue?`:`All counted quantities match the system, so no adjustments will be made - the count will simply be recorded (${counted.size} item(s) counted). Continue?`,async()=>{
+  const counted=Object.keys(scCounts).filter(id=>item(id));
+  if(!counted.length)return toast('Nothing counted yet. Type a quantity or press ✓ on an item.');
+  const changes=scChanges(),notCounted=scScopeItems().filter(i=>scCounts[i.id]===undefined).length;
+  const cats=[...new Set(counted.map(id=>catOf(item(id)||{})))].sort((a,b)=>a.localeCompare(b));
+  const extra=changes.length?`<div class="cfTableWrap"><table class="cfTable"><thead><tr><th>Item</th><th class="num">System</th><th class="num">Counted</th><th class="num">Change</th></tr></thead><tbody>${changes.map(([id,q])=>{const s=bal(id),d=q-s;return `<tr><td>${esc(item(id).name)}</td><td class="num">${s}</td><td class="num">${q}</td><td class="num ${d>0?'dirIn':'dirOut'}">${d>0?'+':''}${d}</td></tr>`}).join('')}</tbody></table></div>`:'';
+  const skipped=notCounted?` ${notCounted} item${notCounted===1?' was':'s were'} not counted and will stay as they are.`:'';
+  confirmAction(changes.length?`Apply ${changes.length} adjustment${changes.length===1?'':'s'}?`:'Record this count?',changes.length?`Stock will be adjusted so the system matches what you counted (${counted.length} item${counted.length===1?'':'s'} counted).${skipped}`:`Everything you counted (${counted.length} item${counted.length===1?'':'s'}) matches the system, so no stock changes are needed.${skipped}`,async()=>{
     let added=0,removed=0;changes.forEach(([id,qty])=>{const d=qty-bal(id);if(d>0)added+=d;else removed-=d});
     changes.forEach(([id,qty])=>applyStockCountAdjustment(id,qty));
-    db.settings.countHistory??=[];db.settings.countHistory.unshift({ts:new Date().toISOString(),user:st.user||'',counted:counted.size,applied:changes.length,added,removed,cats});if(db.settings.countHistory.length>100)db.settings.countHistory.length=100;
-    stockCountActive=false;stockCountData={};scHistory=[];scTouched=new Set();scChecked=new Set();
-    if(await commit())toast(changes.length?`Applied adjustments for ${changes.length} item(s)`:'Stock count recorded - no adjustments needed',false,{title:changes.length?'Stock count applied':'Stock count recorded',icon:'ok'});
+    db.settings.countHistory??=[];db.settings.countHistory.unshift({ts:new Date().toISOString(),user:st.user||'',counted:counted.length,applied:changes.length,added,removed,cats});if(db.settings.countHistory.length>100)db.settings.countHistory.length=100;
+    scCounts={};scUndoStack=[];scSaveDraft();
+    if(await commit())toast(changes.length?`Adjusted ${changes.length} item${changes.length===1?'':'s'}`:'Count recorded, no adjustments needed',false,{title:changes.length?'Stock count applied':'Stock count recorded',icon:'ok'});
     renderStockCount();
-  });
+  },extra);
 };
 $('#scPrint').onclick=()=>{
-  const cat=$('#scCategoryFilter').value;
-  if(!db.items.some(i=>!cat||catOf(i)===cat))return toast('No items to print');
+  const cat=$('#scCategoryFilter').value,scope=scScopeItems();
+  if(!scope.length)return toast('No items to print');
   $('#scPrintTitle').textContent=(db.settings.appName||'Inventory')+' - Stock count sheet';
-  $('#scPrintMeta').textContent=new Date().toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'})+', '+time12(new Date())+' - '+(cat||'All categories')+' - '+scCountedTotal()+' of '+db.items.length+' item(s) counted';
+  $('#scPrintMeta').textContent=new Date().toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'})+', '+time12(new Date())+' - '+(cat||'All categories')+' - '+scope.length+' item(s)';
+  scPrinting=true;renderStockCount();
   document.body.classList.add('print-sc');
   window.print();
 };
-window.addEventListener('afterprint',()=>document.body.classList.remove('print-sc'));
+window.addEventListener('afterprint',()=>{document.body.classList.remove('print-sc');if(scPrinting){scPrinting=false;renderStockCount()}});
 $('#scCategoryFilter').onchange=()=>{renderStockCount()};
 
 function mountCharts(view){
@@ -3846,9 +3915,9 @@ $$('.helpDot').forEach(b=>b.onclick=e=>{e.preventDefault();e.stopPropagation();o
 document.addEventListener('click',e=>{if(!e.target.closest('.helpDot')&&!e.target.closest('#helpPopover'))closeHelpPopover()});addEventListener('resize',closeHelpPopover);addEventListener('scroll',closeHelpPopover,true);
 $('#bell').onclick=e=>{e.stopPropagation();$('#notifPanel').classList.toggle('open')};
 $$('.tabs button[data-p]').forEach(x=>x.onclick=()=>switchTab(x.dataset.p));
-async function tryEnableEdit(silent){beginLoading();let r;try{r=await desk.lock()}finally{endLoading()}st=r.status||st;statusUI();if(r.ok){if(!silent)toast('Editing enabled',false,{title:'Edit mode',icon:'ok'})}else if(!silent){const who=r.status?.lock?.user;toast(who?`${who} is currently editing on another computer`:'Editing is not available right now',false,{title:'View-only'})}return r}
+async function tryEnableEdit(silent){beginLoading();let r;try{r=await desk.lock()}finally{endLoading()}st=r.status||st;if(r.ok)lastActive=Date.now();statusUI();if(r.ok){if(!silent)toast('Editing enabled',false,{title:'Edit mode',icon:'ok'})}else if(!silent){const who=r.status?.lock?.user;toast(who?`${who} is currently editing on another computer`:'Editing is not available right now',false,{title:'View-only'})}return r}
 $('#edit').onclick=()=>tryEnableEdit(false);
-$('#stop').onclick=async()=>{let r=await desk.unlock();st=r.status;statusUI()};
+$('#stop').onclick=()=>stopEditing();
 $('#viewToggle').querySelectorAll('button').forEach(b=>b.onclick=()=>{prefs.catView=b.dataset.view;savePrefs();renderItems();renderAllModal()});
 $('#colBtn').onclick=e=>{e.stopPropagation();$('#colPick').classList.toggle('open')};
 document.addEventListener('mousedown',e=>{$$('.colWrap').forEach(w=>{if(!w.contains(e.target)){const p=w.querySelector('.colPick');if(p)p.classList.remove('open')}});if(!e.target.closest('.notifWrap'))$('#notifPanel').classList.remove('open')});
@@ -3864,7 +3933,7 @@ document.addEventListener('keydown',e=>{
   const open=[...document.querySelectorAll('.modalbg.open')];
   if(open.length){
     const m=open[open.length-1];
-    if(m.id==='itemModal')closeItemModal();else m.classList.remove('open');
+    if(m.id==='idleModal')keepEditing();else if(m.id==='itemModal')closeItemModal();else m.classList.remove('open');
     if(m.id==='confirmModal')_cfCb=null;
     if(m.id==='pwModal')_pwCb=null;
     closeTransientPopups();
@@ -3936,7 +4005,7 @@ document.addEventListener('mouseout',e=>{
 document.addEventListener('scroll',hideTip,true);
 /* ============ CUSTOM WINDOW CHROME ============ */
 let _dragWatch=null,_winHit=null,_winStateT=0;
-const _winInteractive=el=>!!el.closest('button,input,select,textarea,a,.iconBtn,.btn,.winControls,.notifWrap,.clock,.wres');
+const _winInteractive=el=>!!el.closest('button,input,select,textarea,a,.iconBtn,.btn,.winControls,.notifWrap,.wres');
 function winControlAt(x,y){
   const wc=$('.winControls');if(!wc)return null;
   const r=wc.getBoundingClientRect();
@@ -4000,15 +4069,42 @@ function bindGrid(el,inModal){
   el.addEventListener('mouseout',e=>{if(e.target.closest('.seg'))hideTip()});
 }
 function setupDelegation(){bindGrid($('#items'),false);bindGrid($('#allBody'),true);$$('.expandBtn').forEach(b=>b.onclick=()=>openStat(b.dataset.stat))}
-function tickClock(){const d=new Date();const c=$('#clock');if(c){c.querySelector('.ctime').textContent=time12(d);c.querySelector('.cdate').textContent=d.toLocaleDateString('en-GB',{weekday:'short',day:'2-digit',month:'short'})}}
 let lastLockPing=0;
 // Renew the shared edit lock only while a human is actually using this
 // session (throttled to one ping per 5 s). An open-but-idle app stops
 // renewing, so after STALE_MS another computer can take over edit rights.
-['mousemove','mousedown','keydown'].forEach(n=>addEventListener(n,()=>{if(!st.owned)return;lastActive=Date.now();const now=Date.now();if(now-lastLockPing>=5000){lastLockPing=now;desk.activity().catch(()=>{})}}));
-// Release editing after 10 minutes without mouse or keyboard activity.
-setInterval(async()=>{tickClock();if(!st.owned)return;let r=Math.max(0,600-Math.floor((Date.now()-lastActive)/1000));const cd=$('#stopCountdown');if(cd)cd.textContent=`${Math.floor(r/60)}:${String(r%60).padStart(2,'0')}`;if(!r){let x=await desk.unlock();st=x.status;statusUI()}},1000);
-tickClock();
+// While the idle reminder is open, only "Keep editing" counts as activity,
+// so a stray mouse nudge cannot silently dismiss the countdown.
+function markActive(){lastActive=Date.now();const now=Date.now();if(now-lastLockPing>=5000){lastLockPing=now;desk.activity().catch(()=>{})}}
+['mousemove','mousedown','keydown'].forEach(n=>addEventListener(n,()=>{if(!st.owned||idleWarnOpen())return;markActive()}));
+/* Idle timeout: runs silently. After `idleWarnMin` minutes without mouse or
+   keyboard activity a reminder appears; editing is released `idleGraceMin`
+   minutes later unless the user chooses Keep editing. Both are shared prefs. */
+const IDLE_MIN=1,IDLE_MAX=240;
+const idleClamp=(v,d)=>{v=Math.round(+v);return Number.isFinite(v)?Math.min(IDLE_MAX,Math.max(IDLE_MIN,v)):d};
+const idleCfg=()=>({warn:idleClamp(prefs.idleWarnMin,PREFD.idleWarnMin)*60000,grace:idleClamp(prefs.idleGraceMin,PREFD.idleGraceMin)*60000});
+const fmtMins=ms=>{const t=Math.round(ms/60000),h=Math.floor(t/60),m=t%60,hs=`${h} hour${h===1?'':'s'}`,ms_=`${m} minute${m===1?'':'s'}`;return !h?ms_:m?`${hs} ${ms_}`:hs};
+const idleWarnOpen=()=>$('#idleModal').classList.contains('open');
+function openIdleWarn(){const {warn}=idleCfg();$('#idleMsg').textContent=`No activity for ${fmtMins(warn)}. When the timer runs out, editing stops so another computer can edit.`;$('#idleModal').classList.add('open');setTimeout(()=>$('#idleKeep').focus(),30)}
+function closeIdleWarn(){$('#idleModal').classList.remove('open','urgent')}
+function renderIdleWarn(left,grace){const s=Math.max(0,Math.ceil(left/1000));$('#idleTime').textContent=`${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`;$('#idleFill').style.transform=`scaleX(${Math.max(0,Math.min(1,left/grace))})`;$('#idleModal').classList.toggle('urgent',s<=60)}
+function keepEditing(){closeIdleWarn();lastLockPing=0;markActive()}
+async function stopEditing(){closeIdleWarn();const r=await desk.unlock();st=r.status;statusUI()}
+$('#idleKeep').onclick=keepEditing;
+$('#idleStop').onclick=stopEditing;
+$('#idleModal').addEventListener('mousedown',e=>{if(e.target.id==='idleModal')keepEditing()});
+let idleReleasing=false;
+setInterval(async()=>{
+  if(!st.owned||idleReleasing){if(!st.owned&&idleWarnOpen())closeIdleWarn();return}
+  const {warn,grace}=idleCfg(),idle=Date.now()-lastActive;
+  if(idle>=warn+grace){idleReleasing=true;try{await stopEditing();toast(`Editing stopped after ${fmtMins(warn+grace)} without activity.`,false,{title:'Edit mode'})}finally{idleReleasing=false}return}
+  if(idle>=warn){if(!idleWarnOpen())openIdleWarn();renderIdleWarn(warn+grace-idle,grace)}
+},1000);
+function renderIdleSummary(w,g){$('#idleSummary').textContent=`Editing stops after ${fmtMins((w+g)*60000)} without activity.`}
+function renderIdleSet(){const w=idleClamp(prefs.idleWarnMin,PREFD.idleWarnMin),g=idleClamp(prefs.idleGraceMin,PREFD.idleGraceMin);['idleWarnMin','idleGraceMin'].forEach((id,i)=>{const el=$('#'+id);if(document.activeElement!==el)el.value=i?g:w});renderIdleSummary(w,g)}
+['idleWarnMin','idleGraceMin'].forEach(key=>{const el=$('#'+key);
+  el.onchange=()=>{prefs[key]=idleClamp(el.value,PREFD[key]);el.value=prefs[key];savePrefs();renderIdleSet()};
+  el.oninput=()=>renderIdleSummary(idleClamp($('#idleWarnMin').value,PREFD.idleWarnMin),idleClamp($('#idleGraceMin').value,PREFD.idleGraceMin))});
 let _searchT;$('#search').oninput=()=>{clearTimeout(_searchT);_searchT=setTimeout(renderHist,140)};
 desk.onData(()=>{if(!st.owned)load()});
 desk.onLock(x=>{st=x;statusUI()});
@@ -4078,7 +4174,7 @@ initUpdates();
 function installInlineClearButtons(root=document){
   const allowed=new Set(['text','search','password','number','email','tel','url']);
   root.querySelectorAll('input').forEach(input=>{
-    const type=(input.getAttribute('type')||'text').toLowerCase();if(!allowed.has(type)||input.closest('.inlineClearWrap')||input.classList.contains('scanField'))return;
+    const type=(input.getAttribute('type')||'text').toLowerCase();if(!allowed.has(type)||input.closest('.inlineClearWrap,.qtyStepper,.idleInput')||input.classList.contains('scanField'))return;
     const wrap=document.createElement('span');wrap.className='inlineClearWrap';input.parentNode.insertBefore(wrap,input);wrap.appendChild(input);
     const btn=document.createElement('button');btn.type='button';btn.className='inlineClearBtn';btn.setAttribute('aria-label','Clear '+(input.getAttribute('aria-label')||input.id||'field'));btn.textContent='×';wrap.appendChild(btn);
     const sync=()=>wrap.classList.toggle('hasValue',String(input.value||'').length>0);input.addEventListener('input',sync);input.addEventListener('change',sync);
@@ -4086,7 +4182,7 @@ function installInlineClearButtons(root=document){
   });
 }
 
-(async()=>{applyScale();initMotion();initGraphics();fixViewportHeight();installInlineClearButtons();setupDelegation();initWindowChrome();renderBackupHealth();renderBackupDir();renderColPick();renderChartsPick();renderScaleSel();renderDensity();$('#inDate').value=$('#outDate').value=$('#inExp').value=$('#bulkDate').value=today();setBulkMode('in');updateBulkActions();if(window.desk?.resizeWindow){const f=getUiScaleFactor();if(Math.abs(f-1)>0.001){await desk.resizeWindow(f);fixViewportHeight()}}await load();await tryEnableEdit(true);renderScopeSel()})();
+(async()=>{applyScale();initMotion();initGraphics();fixViewportHeight();installInlineClearButtons();setupDelegation();initWindowChrome();renderBackupHealth();renderBackupDir();renderColPick();renderChartsPick();renderScaleSel();renderDensity();$('#inDate').value=$('#outDate').value=$('#inExp').value=$('#bulkDate').value=today();setBulkMode('in');updateBulkActions();if(window.desk?.resizeWindow){const f=getUiScaleFactor();if(Math.abs(f-1)>0.001){await desk.resizeWindow(f);fixViewportHeight()}}await load();scRestoreDraft();await tryEnableEdit(true);renderScopeSel()})();
 </script>
 </body>
 </html>

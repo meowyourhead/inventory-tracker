@@ -484,7 +484,8 @@ fn resize_direction(name: &str) -> Option<ResizeDirection> {
 }
 
 fn resize_window(window: &Window, factor: f64) -> Value {
-    let factor = factor.clamp(0.85, 1.3);
+    // Matches the UI's display-scale choices: 90, 100, 120 and 140%.
+    let factor = factor.clamp(0.9, 1.4);
     let scale = window.scale_factor();
 
     let (work_width, work_height) = monitor_work_area(window)
@@ -503,8 +504,60 @@ fn resize_window(window: &Window, factor: f64) -> Value {
     let width = (BASE_W * factor).max(MIN_W).min(work_width).round() as u32;
     let height = (BASE_H * factor).max(MIN_H).min(work_height).round() as u32;
 
+    // Resizing a maximized window makes Windows restore it. While maximized,
+    // keep it maximized and only change the size it restores to later.
+    if window.is_maximized() {
+        let restored = set_restored_size(window, width, height);
+        return json!({ "ok": true, "width": width, "height": height, "maximized": true, "restoredSizeSet": restored });
+    }
     window.set_inner_size(LogicalSize::new(width, height));
     json!({ "ok": true, "width": width, "height": height })
+}
+
+/// Changes the window's restored ("normal") size without leaving the
+/// maximized state, keeping the restored window centred where it was.
+#[cfg(windows)]
+fn set_restored_size(window: &Window, width: u32, height: u32) -> bool {
+    use tao::platform::windows::WindowExtWindows;
+    use windows_sys::Win32::Foundation::RECT;
+    use windows_sys::Win32::UI::WindowsAndMessaging::{
+        GetWindowPlacement, SetWindowPlacement, WINDOWPLACEMENT,
+    };
+
+    let hwnd = window.hwnd();
+    // SAFETY: WINDOWPLACEMENT is a plain C struct (integers, POINTs and a
+    // RECT); all-zero is a valid bit pattern.
+    let mut placement: WINDOWPLACEMENT = unsafe { std::mem::zeroed() };
+    let Ok(length) = u32::try_from(std::mem::size_of::<WINDOWPLACEMENT>()) else {
+        return false;
+    };
+    placement.length = length;
+    // SAFETY: `hwnd` is the live main window owned by this event loop and
+    // `placement` is a correctly sized, writable WINDOWPLACEMENT.
+    if unsafe { GetWindowPlacement(hwnd as _, &raw mut placement) } == 0 {
+        return false;
+    }
+    // The inner size is logical; the placement rect is physical pixels and
+    // covers the whole (borderless) window, so scale and use it directly.
+    let scale = window.scale_factor();
+    let w = (f64::from(width) * scale).round() as i32;
+    let h = (f64::from(height) * scale).round() as i32;
+    let old = placement.rcNormalPosition;
+    let cx = old.left + (old.right - old.left) / 2;
+    let cy = old.top + (old.bottom - old.top) / 2;
+    let left = cx - w / 2;
+    // Placement uses workspace coordinates (0,0 = top of the primary work
+    // area). On that monitor, never push the title bar above the top edge.
+    let top = if old.top >= 0 { (cy - h / 2).max(0) } else { cy - h / 2 };
+    placement.rcNormalPosition = RECT { left, top, right: left + w, bottom: top + h };
+    // `showCmd` is still SW_SHOWMAXIMIZED, so the window stays maximized.
+    // SAFETY: same live `hwnd`; `placement` was filled by GetWindowPlacement.
+    unsafe { SetWindowPlacement(hwnd as _, &raw const placement) != 0 }
+}
+
+#[cfg(not(windows))]
+fn set_restored_size(_window: &Window, _width: u32, _height: u32) -> bool {
+    false
 }
 
 #[cfg(windows)]

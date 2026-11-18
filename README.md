@@ -84,9 +84,17 @@ Running clients pick the release up on their next check.
 - Item catalogue, stock entries, lots, expiry dates and stock movement history.
 - Catalog and history rows open their edit dialog when clicked. Per-row edit
   buttons were removed; undo, restore and remove actions remain as buttons.
-- Count tab with pre-filled system quantities, a **Counted?** tick column,
-  live variance, undo/discard/apply adjustments, printable count sheets and a
-  persistent **Past stock counts** history.
+- Count tab: rows start blank; type the shelf quantity or press ✓ when it
+  matches the system. Find or scan an item to jump to its row, filter by
+  category and show All / Not counted / Differences. The count in progress is
+  kept on this computer until **Review & apply** (which lists every change
+  first) or **Discard count**. Printable count sheets and a collapsible
+  **Past stock counts** history.
+- Dashboard card view has a **Sort** menu (name, low stock first, least/most
+  stock, expiring soonest, category). It shares the table's sort order.
+- Scan/Catalog tab: choosing an item shows its open lots (earliest expiry
+  first); click one to fill Lot and Expiry. Quantity has −/+ steppers and
+  "By" shows who is recorded when left blank.
 - Dashboard table view supports checkbox selection, a **Batch delete** button
   beside the search field, and a compact single-line layout with **Balance**
   after **Status**. Dashboard cards use dense spacing and compact quantity
@@ -120,10 +128,13 @@ Running clients pick the release up on their next check.
   layer, with darker, thicker glass for sidebars and popovers. Cyberpunk,
   Genshin, ZZZ and Liquid open in dark mode by default when selected; the mode
   toggle still switches them to light.
-- UI scale presets that resize and centre the window on the current monitor.
+- Display scale toggle (90 / 100 / 120 / 140%) that resizes and centres the
+  window on the current monitor.
 - Cross-machine edit lock: one editor at a time, everyone else is read-only.
   The lock heartbeat goes stale after 30 seconds of inactivity so another user
-  can take over; the editing UI releases itself after 10 minutes idle.
+  can take over. A silent idle timer shows a "Still editing?" reminder after
+  15 minutes without activity and releases editing 15 minutes later unless the
+  user chooses Keep editing; both periods are set in Settings ▸ Editing timeout.
 - Dashboard charts: 6-month usage by item, a 1-month usage estimate per item
   (3/6/12-month average), expiry, top consumed, stock cover and stock level,
   with instant hover details and expandable detailed views.
@@ -160,9 +171,10 @@ Running clients pick the release up on their next check.
   click the selector to open a searchable item list. Stock cover and Stock
   level are sized to the same height as the 1-month usage panel.
 - Custom borderless window chrome with minimize, maximize/restore and close
-  buttons, plus edge/corner resizing. Every theme uses the same full-height
-  54 px controls flush to the top-right corner. The header clock, history times,
-  lock/backup times and count-sheet timestamps all use a 12-hour clock with
+  buttons, plus edge/corner resizing. The title bar is a compact 42 px strip
+  (no greeting or clock) with 30 px controls; every theme uses the same
+  full-height 44 px window buttons flush to the top-right corner. History
+  times, lock/backup times and count-sheet timestamps use a 12-hour clock with
   AM/PM.
 - Cyberpunk/Genshin motion (HUD sweep/flicker, drifting Genshin glints) with a
   **Motion override** switch in Settings → Theme for systems that enable

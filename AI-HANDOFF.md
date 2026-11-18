@@ -287,8 +287,13 @@ Important details:
 - The heartbeat is renewed only on real UI activity (`activity` calls), not by
   a blind timer. A 10-second background checker detects if another user took
   over and pushes `lock-change` to make the UI read-only.
-- The UI countdown releases editing on its own after **10 minutes** without
-  mouse or keyboard activity (previously 5 minutes).
+- The UI idle timer runs silently (no countdown in the title bar). After
+  `prefs.idleWarnMin` (default **15**) minutes without mouse or keyboard
+  activity it opens `#idleModal` ("Still editing?") with a countdown; editing
+  is released `prefs.idleGraceMin` (default **15**) minutes later unless the
+  user clicks Keep editing (Esc or a backdrop click also count). While the
+  reminder is open, ordinary mouse movement does not reset the timer. Both
+  values are shared preferences, edited in Settings ▸ Editing timeout.
 - Lock ownership is decided by the `session` field (computer name + PID +
   start time), not the PID alone, which can collide across PCs. A free lock
   is taken with `create_new`, so two PCs cannot both acquire it.
@@ -449,10 +454,15 @@ SheetJS code:
   `+N more…` label. The stock chart meta line is hidden in the dashboard;
   `stockChartHeight()` fills the remaining body and the actual-width SVG
   viewBox in `drawStockChart()` keeps the plot undistorted.
-- Count tab follows the reference: pre-filled system quantities, `scTouched` and
-  `scChecked` sets, a checkbox column, live variance, undo/discard/apply, and
-  `db.settings.countHistory` rendered in the Past stock counts card. There is
-  no scan input or pager in this tab.
+- Count tab: `scCounts` holds only items actually counted (`{itemId: qty}`);
+  there is no pre-fill and no separate "Counted?" checkbox (the ✓ button sets
+  the count to the system quantity). The draft is saved to localStorage
+  `invCountDraft` on every change and restored by `scRestoreDraft()` after the
+  first load. `#scSearch` + Enter accepts a barcode (`parseScan` →
+  `matchItemByRef`) and focuses that row. `scShowMode` filters All / Not
+  counted / Differences. Apply shows a per-item change table, then writes
+  adjustment transactions and `db.settings.countHistory` (shown in the
+  collapsible `<details id="scHistCard">`).
 - Dashboard table view adds `dashSel` checkboxes and `#batchDeleteBtn` beside
   the search field; batch delete logs one `cat_remove` per removed item and can
   restore the whole batch. Catalog `#bulkEditBtn` uses `scanCatFiltered()` to
@@ -541,7 +551,8 @@ SheetJS code:
 - Settings → Data & Backup has the automatic-backup folder path plus
   `#backupDirBtn` (choose) and `#openBackupDirBtn` (open); the path is saved in
   `settings.backupDir`.
-- UI scale: factor clamped to `0.85..1.3`, step `0.05`, applied with CSS zoom and
+- UI scale: one of `UI_SCALES = [0.9, 1, 1.2, 1.4]` (older stored values snap
+  to the nearest; Rust clamps to `0.9..1.4`), applied with CSS zoom and
   a matching native window resize (base 1496×946, minimum 1080×720, clamped to
   the monitor work area).
 - Theme/font/mode changes are saved into `settings` when editing is enabled;
